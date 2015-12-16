@@ -1,0 +1,47 @@
+$cMain: #173E75
+$cDarkMain: #0A2C5D
+$cLightMain: #0755C3
+$cWhite: #FFFFFF
+$wMain: 980px
+
+$dirList: left, right, top, bottom
+
+$colors: (background: #f2f2f2, yellow: #FEF143, dark-yellow: #fdbf2d, black: #000, light-black: #333, white:#ffffff, main: #173e75, dark-main: #0a2c5d, light-main: #0755c3, red: #ee0000, light-gray: #eeeeee, gray: #cccccc, dark-gray: #999999, green: #009900, light-green: #00bb00, light-orange: #FF8F3E, orange: #F38E00, dark-orange: #FF6B01, cyan: #00edff, blue: #428bca, smoke: #f2f2f2)
+$number: (0.1: 19, 0.2: 33, 0.3: 4c, 0.4: 66, 0.5: 7f, 0.6: 99, 0.7: b2, 0.8: c8, 0.9: e5)
+
+@function get-border($bw, $c)
+  @return #{$bw}px solid #{$c}
+
+=border-radius($radius)
+  +css3interface(border-radius, $radius)
+
+=box-shadow($value)
+  +css3interface(box-shadow, $value)
+
+=transition($value)
+  +css3interface(transition, $value)
+
+=css3interface($property, $value)
+  -webkit-#{$property}: $value
+  -moz-#{$property}: $value
+  -ms-#{$property}: $value
+  -o-#{$property}: $value
+  #{$property}: $value
+
+=full-size()
+  width: 100%
+  height: 100%
+
+=ellipsis()
+  overflow-x: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+=filterOpacity($color)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{ie_hex_str($color)},endColorstr=#{ie_hex_str($color)})
+
+@function getColor($color)
+  @return map_get($colors, $color)
+
+@function getOpacityColor($color, $opa)
+  @return '#' + map_get($number, $opa) + $color

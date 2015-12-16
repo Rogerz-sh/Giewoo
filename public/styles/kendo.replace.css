@@ -1,0 +1,12 @@
+.k-numeric-wrap { -webkit-border-radius: 4px 0 0 4px; -moz-border-radius: 4px 0 0 4px; -ms-border-radius: 4px 0 0 4px; -o-border-radius: 4px 0 0 4px; border-radius: 4px 0 0 4px; }
+.k-numeric-wrap .k-input { height: 32px; padding: 6px 0px; }
+
+.k-grid { -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
+.k-grid.k-widget { border-width: 0; -webkit-box-shadow: none; -moz-box-shadow: none; -ms-box-shadow: none; -o-box-shadow: none; box-shadow: none; }
+.k-grid .k-grid-toolbar { background-color: #ffffff; }
+.k-grid .k-grid-header thead tr th { border-width: 0; }
+.k-grid .k-grid-header thead tr th.k-header { background-color: #173E75; color: #FFFFFF; }
+.k-grid tbody tr.k-alt { background: #fff; }
+.k-grid tbody tr td { border-width: 0; }
+.k-grid .k-pager-wrap { background: #fff; }
+.k-grid .k-pager-wrap.k-widget { -webkit-box-shadow: none; -moz-box-shadow: none; -ms-box-shadow: none; -o-box-shadow: none; box-shadow: none; }

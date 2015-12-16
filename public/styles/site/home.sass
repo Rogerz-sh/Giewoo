@@ -1,0 +1,531 @@
+@import "../core.sass"
+
+//Header样式
+header, .header
+  width: 100%
+  min-width: $wMain
+  height: 60px
+  top: 0
+  z-index: 10
+  position: relative
+  background-color: rgba(#fff, .5)
+
+//Footer样式
+footer, .footer
+  height: 50px
+  text-align: center
+  line-height: 50px
+  background-color: #333
+  color: #fff
+
+/*LOGO*/
+.logo
+  position: absolute
+  margin: 5px 0 0 0
+  height: 115px
+  width: 115px
+  background-color: #fff
+  z-index: 11
+  box-shadow: 1px 1px 5px #333, -1px -1px 5px #333
+  text-align: center
+  cursor: pointer
+
+.logo img
+  //float: left
+  vertical-align: bottom
+
+.logo-text
+  line-height: 1em
+  font-size: 20px
+  //float: left
+  //margin-left: 10px
+  font-weight: bold
+  margin-top: 10px
+  small
+    display: block
+    letter-spacing: 3px
+    font-weight: bold
+    font-family: "微软雅黑"
+
+/*Nav*/
+nav
+  background: rgba(#000, .3)
+  +filterOpacity(rgba(#000, .3))
+  position: relative
+  width: 100%
+  min-width: $wMain
+  top: 0px
+  z-index: 9
+
+nav ul
+  float: left
+  margin: 0 0 0 150px
+  list-style: none
+  font-weight: bold
+
+nav ul li
+  float: left
+  height: 50px
+
+nav ul li.active
+  background-color: getColor(dark-orange)
+
+nav ul li:not(.active):hover
+  //background-color: getColor(yellow)
+  position: relative
+  &:after
+    content: ''
+    width: 100%
+    display: block
+    position: absolute
+    bottom: 0
+    height: 5px
+    background: getColor(yellow)
+
+nav a
+  color: #fff
+  padding: 0 20px
+  display: block
+  line-height: 50px
+nav a:hover
+  color: #fff
+  text-decoration: none
+
+/*SideMenu*/
+.quick-menu
+  float: right
+  text-align: right
+  font-size: 12px
+  margin-top: 8px
+  ul
+    float: right
+    line-height: 20px
+    list-style: none
+    margin: 0
+    li
+      float: left
+  a
+    padding: 0 5px
+    //color: $cMain
+    text-decoration: none
+  a:hover
+    color: rgb(238, 102, 17)
+  img
+    vertical-align: text-bottom
+  strong
+    font-size: 1.5em
+    font-weight: bold
+
+//侧边工具栏
+#side-tools
+  position: fixed
+  right: 0
+  top: 40%
+  ul
+    width: 60px
+    border: 1px solid getColor(dark-orange)
+    li
+      width: 100%
+      text-align: center
+      height: 60px
+      background: getColor(dark-orange)
+      color: #fff
+      cursor: pointer
+      &:not(:last-child)
+        border-bottom: 1px solid getColor(yellow)
+      &:last-child
+        background: #fff
+        color: getColor(dark-orange)
+      &.side-tools-handler
+        .side-tools-hide
+          display: none
+          position: absolute
+          max-width: 200px
+          right: 85px
+          min-height: 60px
+          background: getColor(dark-orange)
+          &:after
+            content: ''
+            display: block
+            position: absolute
+            width: 0
+            height: 0
+            border: 20px solid getColor(dark-orange)
+            border-right-color: transparent
+            border-bottom-color: transparent
+            border-top-color: transparent
+            top: 10px
+            right: -40px
+        &:hover
+          .side-tools-hide
+            display: block
+
+/*Background*/
+.header.bg
+  background-color: #ffaa22
+  color: #fff
+
+/*Slider*/
+.slider
+  width: 100%
+  height: 400px
+  position: relative
+  background: #d5d5d5
+  overflow: hidden
+  min-width: 980px
+
+.slider:after
+  content: ''
+  width: 100%
+  height: 400px
+  display: block
+
+/*slider-img*/
+.slider-main
+  position: absolute
+  width: 100%
+  list-style: none
+  margin: 0
+  padding: 0
+  top: 0px
+  transition: top .3s linear
+
+.slider-main li
+  position: relative
+  width: 100%
+  height: 400px
+
+/*slider-btn*/
+.slider-btn
+  position: absolute
+  bottom: 30px
+  width: 100%
+  text-align: center
+
+.slider-btn a
+  display: inline-block
+  width: 20px
+  height: 20px
+  background: rgba(255, 255, 255, .3)
+  margin: 0 5px
+  +css3interface(border-radius, 50%)
+
+.slider-btn a.active
+  background: rgba(255, 255, 255, .8)
+
+
+/*Floater*/
+.absolute-toolkit
+  width: 100%
+  height: 0px
+  min-width: 980px
+  position: relative
+
+.absolute-right
+  width: 240px
+  background: rgba(0, 0, 0, .8)
+  position: absolute
+  top: -360px
+  right: 20px
+
+.absolute-right img
+  width: 200px
+  height: 200px
+  margin: 10px 20px
+
+.toolkit-button
+  box-sizing: border-box
+  +border-radius(5px)
+  width: 220px
+  padding: 10px
+  margin: 10px
+  text-align: center
+  background: #fa2
+
+.slide-list
+  position: relative
+  height: 100%
+  width: 100%
+  //+css3interface(perspective, 2000px)
+  overflow: hidden
+  &:after
+    display: block
+    content: ''
+    clear: both
+  .arrow
+    position: absolute
+    width: 50px
+    height: 200px
+    cursor: pointer
+    z-index: 1
+    //background: rgba(#ccc,.1)
+    color: getColor(orange)
+    &.arrow-left
+      left: 0
+    &.arrow-right
+      right: 0
+  .slide-content
+    position: absolute
+    width: 680px
+    //padding: 0 50px
+    left: 50px
+    height: 200px
+    overflow: hidden
+    //+css3interface(transform-style, preserve-3d)
+    //+css3interface(transition, transform .8s linear)
+    //+css3interface(transform, translateZ(-340px) rotateY(0deg))
+    //&>*:nth-child(4n+1)
+    //  +css3interface(transform, translateZ(340px) rotateY(0deg))
+    //&>*:nth-child(4n+2)
+    //  +css3interface(transform, translateX(-340px) rotateY(-90deg))
+    //&>*:nth-child(4n+3)
+    //  +css3interface(transform, translateZ(-340px) rotateY(180deg))
+    //&>*:nth-child(4n+4)
+    //  +css3interface(transform, translateX(340px) rotateY(90deg))
+    &>*
+      width: 400%
+      height: 200px
+      overflow: hidden
+      position: relative
+      left: 0
+      +css3interface(transition, left .2s linear)
+      &>*
+        //display: none
+        float: left
+        position: relative
+        top: 0
+        width: 680px
+        height: 200px
+        //+css3interface(transform-style, preserve-3d)
+        //+css3interface(backface-visibility, hidden)
+        //background: rgba(#fefefe, .95)
+        &.active
+          //display: table
+  .slide-light
+    position: absolute
+    bottom: -5px
+    width: 100%
+    text-align: center
+    span
+      display: inline-block
+      width: 20px
+      height: 4px
+      background-color: getColor(yellow)
+      margin: 5px
+      bottom: 0
+      +border-radius(2px)
+      &.active
+        background-color: getColor(orange)
+
+#data-container
+  height: 200px
+  position: relative
+#data-list
+  position: absolute
+  height: 200px
+  width: 780px
+  left: 0
+  top: 0
+  z-index: 1
+#data-update
+  position: absolute
+  right: 0
+  top: 0
+  width: 200px
+  height: 200px
+  text-align: center
+  font-size: 2em
+  font-weight: bold
+  color: getColor(orange)
+  //color: #fff
+  display: table
+  div
+    display: table-cell
+    height: 100%
+    vertical-align: middle
+
+
+.professional-area
+  width: 100%
+  height: 280px
+
+#news
+
+#news-title
+  li
+    width: 180px
+    margin-right: 20px
+    text-align: center
+    background: #cccccc
+    position: relative
+    cursor: pointer
+    a
+      color: #333
+    &:last-child
+      margin-right: 0
+    &.active
+      background: getColor(dark-orange)
+      color: #fff
+      a
+        color: #fff
+      &:after
+        content: ''
+        width: 0
+        height: 0
+        border: 15px solid getColor(dark-orange)
+        border-right-color: transparent
+        border-left-color: transparent
+        border-bottom-color: transparent
+        position: absolute
+        top: 40px
+        left: 75px
+
+#news-content
+  div
+    display: none
+    &.active
+      display: block
+  img
+    vertical-align: top
+    margin-top: 30px
+  ul
+    margin-left: 20px
+    //width: 370px
+    min-height: 180px
+    padding-left: 220px
+    li
+      padding: 5px 0
+      &:before
+        content: '>'
+        display: inline-block
+        margin-right: 5px
+      a
+        color: #333
+        &:hover
+          color: orange
+
+#career
+  //background: url('/images/border.png') repeat-y top left
+  //padding-left: 40px
+  ul
+    li
+      padding: 10px 0
+      width: 32%
+
+#contact
+  height: 350px
+  padding-top: 30px
+  background: url('/images/contact_us.jpg') no-repeat center
+  background-size: cover
+  position: relative
+
+#contact-form
+  .form-control
+    color: getColor(light-black)
+    background: rgba(getColor(orange), .3)
+    background: transparent\0
+    +filterOpacity(rgba(getColor(orange), .3))
+  input.form-control
+    height: 40px
+    padding-left: 30px
+  textarea.form-control
+    height: 140px
+    padding-left: 30px
+    resize: none
+  button.btn
+    height: 40px
+    color: getColor(light-black)
+    background: rgba(getColor(orange), .3)
+    background: transparent\0
+    +filterOpacity(rgba(getColor(orange), .3))
+    outline-color: getColor(orange)
+    font-size: 14px
+    &:hover
+      color: #fff
+  p
+    position: relative
+    &:before
+      position: absolute
+      font-family: FontAwesome
+      left: 0
+      display: block
+      width: 30px
+      padding-top: 9px
+      text-align: center
+      color: getColor(light-black)
+  #input_user:before
+    content: '\f007'
+  #input_email:before
+    content: '\f003'
+  #input_phone:before
+    content: '\f098'
+  #input_message:before
+    content: '\f044'
+    padding-top: 5px
+
+//内页相关样式
+.site-nav
+  list-style: none
+  border: 1px solid #ddd
+  padding: 5px
+  +border-radius(5px)
+  &>li
+    padding: 10px 15px
+    border: 1px solid #ddd
+    +border-radius(5px)
+    margin: 5px 0
+    cursor: pointer
+    &.active
+      border: 1px solid #fdbf2d
+      background: #fdbf2d
+      color: #000
+      &:after
+        content: '>'
+        display: block
+        float: right
+    &:not(.active):hover
+      background: #eee
+      &:after
+        content: '>'
+        display: block
+        float: right
+    &.sub-nav-title
+      &.active:hover
+        background: getColor(orange)
+        color: #fff
+      &:hover
+        color: inherit
+        &:after
+          content: ''
+  .site-sub-nav
+    padding: 0 10px
+    li
+      padding: 5px
+      cursor: pointer
+      &:hover
+        color: getColor(orange)
+      &.active
+        color: getColor(orange)
+      &:before
+        content: '>'
+        color: getColor(orange)
+        margin-right: 5px
+
+
+.site-content
+  li
+    display: none
+    p
+      line-height: 2em
+    &.active
+      display: block
+
+ul.example-list
+  li
+    margin-top: 10px
+    padding: 5px 15px 0
+    line-height: 2.5em
+    border: 1px solid getColor(light-gray)
+    background: getColor(light-gray)
+    color: getColor(light-black)
+    +css3interface(border-radius, 5px)

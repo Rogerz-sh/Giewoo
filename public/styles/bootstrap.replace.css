@@ -1,0 +1,11 @@
+table.table { margin-bottom: 0; }
+
+.form-group label { font-weight: normal; }
+
+.modal { width: 600px; margin: 0 auto; }
+.modal.modal-sm { width: 300px; }
+.modal.modal-lg { width: 900px; }
+.modal .modal-dialog { width: 100%; }
+.modal .modal-footer { text-align: left; }
+
+blockquote small:before { content: ""; }

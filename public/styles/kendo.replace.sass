@@ -1,0 +1,34 @@
+@import "core.sass"
+
+//Replace of Kendo.css
+.k-numeric-wrap
+  +border-radius(4px 0 0 4px)
+  .k-input
+    height: 32px
+    padding: 6px 0px
+
+.k-grid
+  +border-radius(0)
+  &.k-widget
+    border-width: 0
+    +box-shadow(none)
+  .k-grid-toolbar
+    background-color: #ffffff
+  .k-grid-header
+    thead
+      tr
+        th
+          border-width: 0
+          &.k-header
+            background-color: $cMain
+            color: $cWhite
+  tbody
+    tr
+      &.k-alt
+        background: #fff
+      td
+        border-width: 0
+  .k-pager-wrap
+    background: #fff
+    &.k-widget
+      +box-shadow(none)
