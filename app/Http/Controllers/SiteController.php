@@ -146,6 +146,10 @@ class SiteController extends BaseController {
         return view('site.article')->with('navIndex', -1)->with('id', $id);
     }
 
+    public function getMobile() {
+        return view('site.mobile');
+    }
+
     public function getArticleData($id) {
         $art = Article::find($id);
         return response($art);

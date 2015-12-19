@@ -1,8 +1,6 @@
 @charset "UTF-8";
 * { margin: 0; padding: 0; }
 
-html, body { margin: 0; padding: 0; min-height: 100%; min-width: 980px; font-family: "黑体" Consolas; }
-
 ul { margin: 0; list-style: none; }
 
 label { font-weight: normal; }
