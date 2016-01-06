@@ -45,7 +45,7 @@
                                 <li>软件开发</li>
                                 <li>硬件开发</li>
                             </ul>
-                            <h3 class="padding-left-25 margin-top-60">成功职位</h3>
+                            <h3 class="padding-left-25 margin-top-60">成功案例</h3>
                             <ul class="inline-block padding-left-25 example-list">
                                 <li>集团公司副总裁</li>
                                 <li>技术总监／经理</li>
@@ -100,7 +100,7 @@
                                 <li>金融服务／金融投资</li>
                                 <li>资产管理</li>
                             </ul>
-                            <h3 class="padding-left-25 margin-top-60">成功职位</h3>
+                            <h3 class="padding-left-25 margin-top-60">成功案例</h3>
                             <ul class="inline-block padding-left-25 example-list">
                                 <li>集团公司副总裁</li>
                                 <li>投资银行总经理</li>
@@ -157,7 +157,7 @@
                                 <li>工程规划/设计/装潢</li>
                                 <li>房地产服务（物业管理/地产经纪）</li>
                             </ul>
-                            <h3 class="padding-left-25 margin-top-60">成功职位</h3>
+                            <h3 class="padding-left-25 margin-top-60">成功案例</h3>
                             <ul class="inline-block padding-left-25 example-list">
                                 <li>执行总裁</li>
                                 <li>营销副总裁／总监</li>
@@ -202,7 +202,7 @@
                                 <li>工业自动化</li>
                                 <li>电气</li>
                             </ul>
-                            <h3 class="padding-left-25 margin-top-60">成功职位</h3>
+                            <h3 class="padding-left-25 margin-top-60">成功案例</h3>
                             <ul class="inline-block padding-left-25 example-list">
                                 <li>总经理</li>
                                 <li>生产副总</li>
@@ -254,7 +254,7 @@
                                 <li>养老／健康</li>
                                 <li>疗养院</li>
                             </ul>
-                            <h3 class="padding-left-25 margin-top-60">成功职位</h3>
+                            <h3 class="padding-left-25 margin-top-60">成功案例</h3>
                             <ul class="inline-block padding-left-25 example-list">
                                 <li>养老事业部总经理</li>
                                 <li>旅游事业部总经理</li>
@@ -309,7 +309,7 @@
                                 <li>办公用品</li>
                                 <li>零售／连锁</li>
                             </ul>
-                            <h3 class="padding-left-25 margin-top-60">成功职位</h3>
+                            <h3 class="padding-left-25 margin-top-60">成功案例</h3>
                             <ul class="inline-block padding-left-25 example-list">
                                 <li>首席执行官</li>
                                 <li>分公司总经理</li>
@@ -364,7 +364,7 @@
                                 <li>货物贸易</li>
                                 <li>服务贸易</li>
                             </ul>
-                            <h3 class="padding-left-25 margin-top-60">成功职位</h3>
+                            <h3 class="padding-left-25 margin-top-60">成功案例</h3>
                             <ul class="inline-block padding-left-25 example-list">
                                 <li>总经理</li>
                                 <li>电商运营总经理</li>
@@ -417,7 +417,7 @@
                                 <li>早教／幼儿教育</li>
                                 <li>外语培训</li>
                             </ul>
-                            <h3 class="padding-left-25 margin-top-60">成功职位</h3>
+                            <h3 class="padding-left-25 margin-top-60">成功案例</h3>
                             <ul class="inline-block padding-left-25 example-list">
                                 <li>策划总监</li>
                                 <li>战略总监</li>
@@ -465,7 +465,7 @@
                                 <li>总裁办职能岗</li>
                                 <li>客户服务岗</li>
                             </ul>
-                            <h3 class="padding-left-25 margin-top-60">成功职位</h3>
+                            <h3 class="padding-left-25 margin-top-60">成功案例</h3>
                             <ul class="inline-block padding-left-25 example-list">
                                 <li>人力资源总监／经理</li>
                                 <li>培训经理</li>

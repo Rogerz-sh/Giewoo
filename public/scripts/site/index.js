@@ -6,7 +6,7 @@ $(function () {
         var jobList = {};
         $.each(res, function (i, job) {
             if (!jobList[job.type]) jobList[job.type] = [];
-            jobList[job.type].push('<li class="padding-top-5 padding-bottom-5"><a class="black" href="/site/job/{0}">{1}</a> <span class="pull-right orange">{2}</span><br> <small class="dark-gray">{3}</small></li>'.format(job.id, job.job_name, job.salary, job.company_name));
+            jobList[job.type].push('<li class="padding-top-5 padding-bottom-5"><a class="black">{1}</a> <span class="pull-right orange">{2}</span><br> <small class="dark-gray">{3}</small></li>'.format(job.id, job.job_name, job.salary, job.company_name));
         });
         for (var type in jobList) {
             $('#area_job_list').find('ul[data-type="{0}"]'.format(type)).html(jobList[type].join(''));
@@ -31,27 +31,15 @@ $(function () {
             if (!updateData[index]) updateData[index] = [];
             updateData[index].push('\
             <li class="padding-left-10 padding-right-10">\
-                <h4 class="no-margin-bottom">{0}<small> - {1}</small> <small class="margin-left-10">{2}</small>  <small class="orange pull-right bold">年薪{3}万</small></h4>\
-                <p class="dark-gray">于<b>{4}</b>成功入职 <span class="pull-right">周期<b>{5}</b>天</span></p>\
+                <h4 class="no-margin-bottom">{0}<small> - {2}</small>   <small class="orange pull-right bold">年薪{3}万</small></h4>\
+                <p class="dark-gray"><span>{1}</span><span class="pull-right"><b>{4}</b></span></p>\
             </li>\
-            '.format(item.job_name, item.company_name, item.work_area, item.salary, Date.format(item.publish), item.cost));
+            '.format(item.job_name, item.company_name, item.work_area, item.salary, Date.format(item.publish)));
         });
         var ulHtml = [];
         for (var i = 0; i < updateData.length; i++) {
             ulHtml.push('<ul>{0}</ul>'.format(updateData[i].join('')));
         }
         $('#data-container .slide-content').html('<div>{0}</div>'.format(ulHtml.join('')));
-    });
-
-    var slideIndex = 0, slideDegree = 0;
-    $('.slide-list .arrow').click(function () {
-        var direct = ~~$(this).data('direct');
-        slideIndex += direct;
-        var idx = slideIndex % 4, tables = $('.slide-content table'), lights = $('.slide-light span');
-        idx = idx < 0 ? 4 + idx : idx;
-        //tables.eq(idx).addClass('active').siblings('table').removeClass('active');
-        lights.eq(idx).addClass('active').siblings('span').removeClass('active');
-        var degree = idx * -680;
-        $('.slide-content>div').css('left', degree+'px');
     });
 });

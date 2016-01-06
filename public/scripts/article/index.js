@@ -5,7 +5,7 @@ $(function () {
     $('#grid').kendoGrid({
         dataSource: {
             data: [],
-            pageSize: 5,
+            pageSize: 10,
             schema: {
                 model: {
                     id: 'id'

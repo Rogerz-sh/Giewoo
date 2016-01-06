@@ -1,9 +1,50 @@
 @import "../core.sass"
 
-.top-nav
+.section
+  text-align: center
+  font: 20px "Microsoft Yahei"
+  color: #fff
+
+#area
 
   li
+    display: inline-block
+    width: 45%
+    margin: 2px 5px
+    padding: 5px 10px
     background: #f2f2f2
+    overflow: hidden
+    text-align: center
+    +css3interface(box-sizing, border-box)
+    &.active
+      background: getColor(dark-orange)
+      color: #fff
+
+.area-list
+  border: 1px solid getColor(orange)
+  display: none
+  &.active
+    display: block
+  li
+    padding: 3px 5px
+    margin-top: 5px
+
+.top-nav
+  li
+    background: #f2f2f2
+    color: getColor(dark-gray)
+    padding: 2px 3px
+    text-align: center
     &.active
       background: getColor(dark-yellow)
       color: getColor(light-black)
+
+.top-nav-content
+  li
+    padding: 10px
+    background: getColor(dark-yellow)
+    display: none
+    &.active
+      display: block
+    img
+      margin: 2px 0

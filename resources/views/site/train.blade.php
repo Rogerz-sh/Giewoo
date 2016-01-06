@@ -6,8 +6,6 @@
             <div class="wrapper">
                 <img src="/images/temp_01.jpg" alt="猎头服务" width="100%" height="300">
                 <div style="position:absolute;width:100%;top:0;left:0;text-align:center;padding-top:40px;">
-                    <h1 class="white" style="text-shadow: 1px 2px 5px #333;">面试速配 ＋ 专场招聘</h1>
-                    <h3 class="margin-top-30 white" style="text-shadow: 1px 2px 5px #333;">互联网思维＋技术、专家级猎头顾问、智能云人才库、完善保障服务</h3>
                 </div>
             </div>
         </div>

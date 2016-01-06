@@ -19,26 +19,12 @@
             <div class="wrap">
                 <div class="col-xs-4">
                     <ul class="site-nav">
-                        <li data-target="#ltzw" class="active">猎头职位</li>
-                        <li data-target="#jzls">兼职猎手</li>
-                        <li data-target="#rccp">人才测评</li>
+                        <li data-target="#rccp" class="active">人才测评</li>
                     </ul>
                 </div>
                 <div class="col-xs-8">
                     <ul class="site-content">
-                        <li class="active" id="ltzw">
-                            <h3 class="padding-left-25">猎头职位</h3>
-                            <div id="job-list">
-                                <p class="indent"><span class="light-dark">PHP开发工程师</span> <span class="dark-gray">- 某知名互联网金融集团公司</span> <span class="gray">上海</span> <span class="pull-right orange">20-40万</span></p>
-                            </div>
-                        </li>
-                        <li id="jzls">
-                            {{--<h3 class="padding-left-25">兼职猎手</h3>--}}
-                            <p class="text-center col-xs-10"><img src="/images/site/waiting.jpg" alt="" width="300px"></p>
-                            <div class="clearfix"></div>
-                            <p class="text-center orange font-160">您好，该系统正在升级维护中，将在近期开通，敬请期待！</p>
-                        </li>
-                        <li id="rccp">
+                        <li class="active" id="rccp">
                             <h3 class="padding-left-25">人才测评</h3>
                             <p class="indent line-height-10">人才测评服务：</p>
                             <p class="indent line-height-10">我们提供的人才测评服务，通过系统的测评工具（如性格测评量表，能力测评量表，各行业不同职位胜任能力测评工具、评价中心等）帮助个人客观地了解自己，更清晰地规划自己的职业生涯，帮助企业实现更精准的招聘。</p>
@@ -59,16 +45,4 @@
     @include('layout.contact')
     @include('layout.footer')
     <script src="/scripts/site/home.js"></script>
-    <script>
-        $(function () {
-            $.$ajax.get('/site/job-list', function (res) {
-                var job = [];
-                $.each(res, function (i, item) {
-                    job.push('<p class="indent"><a href="/site/job/{0}" class="light-dark">{1}</a> <span class="dark-gray">- {2}</span> <span class="gray">{3}</span> <span class="pull-right orange">{4}</span></p>'.format(item.id, item.job_name, item.company_name, item.work_area, item.salary));
-                });
-                $('#job-list').html(job.join(''));
-                $(document).trigger('click');
-            })
-        });
-    </script>
 @stop

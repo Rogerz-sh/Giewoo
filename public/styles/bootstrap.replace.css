@@ -9,3 +9,5 @@ table.table { margin-bottom: 0; }
 .modal .modal-footer { text-align: left; }
 
 blockquote small:before { content: ""; }
+
+.btn[disabled] { background: #999999; border-color: #999999; }

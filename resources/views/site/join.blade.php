@@ -22,7 +22,6 @@
                     <li class="active" data-target="#tab1">员工成长发展</li>
                     <li class="sub-nav-title">招聘职位</li>
                     <ul class="site-sub-nav">
-                        <li data-target="#job1">猎头顾问</li>
                         <li data-target="#job2">顾问助理</li>
                         <li data-target="#job3">市场主管</li>
                         <li data-target="#job4">实习生</li>
@@ -33,7 +32,7 @@
                 <ul class="site-content">
                     <li class="active" id="tab1">
                         <h3 class="padding-left-25">员工成长发展</h3>
-                        <p class="indent margin-top-20">作为专业的猎头服务机构，我们的员工是即沃的重要资产。我们重视每一位员工的发展及其贡献， 一直致力于为员工提供快乐且具有挑战性的工作、轻松的工作环境、完善的培训机制，以及具有竞争力的薪酬福利，从而吸引和发展更多优秀人才在即沃打造属于自己的平台和事业。</p>
+                        <p class="indent margin-top-20">作为专业的人才咨询服务机构，我们的员工是即沃的重要资产。我们重视每一位员工的发展及其贡献， 一直致力于为员工提供快乐且具有挑战性的工作、轻松的工作环境、完善的培训机制，以及具有竞争力的薪酬福利，从而吸引和发展更多优秀人才在即沃打造属于自己的平台和事业。</p>
                         <div class="padding-10 margin-bottom-20">
                             <div class="col-xs-12">
                                 <img src="/images/join/02.jpg" alt="" width="100%">
@@ -82,16 +81,8 @@
                     <li id="job2">
                         <h3>顾问助理</h3>
                         <p class="line-height-10 margin-top-20">
-                            <strong>岗位职责：</strong><br>
-                            1、在高级顾问的指导下，分析客户需求、制定人才寻访计划并付诸实施；<br>
-                            2、协助高级猎头顾问对候选人进行候选人评估和推荐，面试辅导和项目跟进；<br>
-                            3、关注已推荐人才的工作状态，为其适时提供职业帮助或引导；<br>
-                            4、甄选、储备行业内中高级人才和专业人才；<br>
-                            5、完成个人业绩指标，辅助项目经理拓展新的客户。
-                        </p>
-                        <p class="line-height-10 margin-top-20">
                             <strong>任职资格：</strong><br>
-                            1、专科以上学历；有无经验均可，关键是要热爱猎头行业（我们有完善的培训）；<br>
+                            1、专科以上学历；有无经验均可，关键是要热爱人才咨询行业（我们有完善的培训）；<br>
                             2、有良好的团队合作精神,逻辑思维能力强,沟通和表达能力好；<br>
                             3、性格开朗，积极主动，责任心强，有良好的自我管理能力；<br>
                             4、能吃苦耐劳、有明确的职业目标并且靠自己的付出去实现；<br>
@@ -118,15 +109,6 @@
                     </li>
                     <li id="job4">
                         <h3>实习生</h3>
-                        <p class="line-height-10 margin-top-20">
-                            <strong>岗位职责：</strong><br>
-                            1. 面试、筛选、评估及提供职业规划咨询与候选人；<br>
-                            2. 根据客户需求设定候选人寻访目标公司；<br>
-                            3. 按照公司的标准方法访寻目标候选人；<br>
-                            4. 与客户和团队保持密切沟通和合作让客户满意；<br>
-                            5. 理解客户的人才需求；<br>
-                            6. 完成上级交代的工作。
-                        </p>
                         <p class="line-height-10 margin-top-20">
                             <strong>任职资格：</strong><br>
                             1. 我们需要具有快速学习能力，人际沟通能力、目标感知能力、抗挫折能力和工作积极主动的有志者加入；<br>

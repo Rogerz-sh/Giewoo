@@ -17,15 +17,18 @@ use Illuminate\Support\Facades\DB;
 class SiteController extends BaseController {
 
     public function getJob($id) {
-        return view('site.job')->with('navIndex', -1)->with('id', $id);
+        $job = $this->getJobData($id);
+        //$job->job_requires = str_replace(PHP_EOL, '<br/>', $job->job_requires);
+        //$job->job_desc = str_replace(PHP_EOL, '<br/>', $job->job_desc);
+        return view('site.job')->with('navIndex', -1)->with('job', $job);
     }
 
-    public function getJobData($id) {
+    private function getJobData($id) {
         $job = VirtualJob::find($id);
-        return response($job);
+        return $job;
     }
 
-    public function getAreaJobListData() {
+    private function getAreaJobListData() {
         $job1 = DB::table('virtual-jobs')
             ->select('id', 'job_name', 'salary', 'company_name', 'industry as type')
             ->where('deleted_at', null)->where('showing', 1)->where('industry', 1)
@@ -58,19 +61,10 @@ class SiteController extends BaseController {
 
         $job = $job1->union($job2)->union($job3)->union($job4)->union($job5)->union($job6)->get();
 
-        return response($job);
+        return $job;
     }
 
-    public function getJobList() {
-        $job = DB::table('virtual-jobs')
-            ->select('id', 'job_name', 'salary', 'company_name', 'work_area')
-            ->where('deleted_at', null)->where('showing', 1)
-            ->orderBy('updated_at', 'desc')->take(50)->get();
-
-        return response($job);
-    }
-
-    public function getArticleListData() {
+    private function getArticleListData() {
         $article1 = DB::table('articles')
             ->select('id', 'title', 'publish', 'type')
             ->where('deleted_at', null)->where('showing', 1)->where('type', 1)
@@ -92,14 +86,14 @@ class SiteController extends BaseController {
             ->orderBy('publish', 'desc')->take(6);
 
         $article = $article1->union($article2)->union($article3)->union($article4)->get();
-        return response($article);
+        return $article;
     }
 
-    public function getUpdateData() {
+    private function getUpdateData() {
         $data = DB::table('examples')
             ->where('deleted_at', null)->where('showing', 1)
             ->orderBy('publish', 'desc')->take(16)->get();
-        return response($data);
+        return $data;
     }
 
     public function postCreateMessage() {
@@ -114,6 +108,18 @@ class SiteController extends BaseController {
 //        return response('1');
     }
 
+    public function getIndex() {
+        $url = strtolower(request()->url());
+        $job = $this->getAreaJobListData();
+        if (strpos($url, 'wap.giewoo') === false) {
+            $art = $this->getArticleListData();
+            $update = $this->getUpdateData();
+            return view('site.index')->with(['navIndex'=>0, 'jobList'=>$job, 'artList'=>$art, 'updateList'=>$update]);
+        } else {
+            return view('site.mobile')->with('jobList', $job);
+        }
+    }
+
     public function getHunter() {
         return view('site.hunter')->with('navIndex', 1);
     }
@@ -122,12 +128,25 @@ class SiteController extends BaseController {
         return view('site.train')->with('navIndex', 2);
     }
 
+    public function getConsult() {
+        return view('site.consult')->with('navIndex', 2);
+    }
+
     public function getExample() {
         return view('site.example')->with('navIndex', 3);
     }
 
     public function getCareer() {
         return view('site.career')->with('navIndex', 4);
+    }
+
+    public function getJobList() {
+        $job = DB::table('virtual-jobs')
+            ->select('id', 'job_name', 'salary', 'company_name', 'work_area')
+            ->where('deleted_at', null)->where('showing', 1)
+            ->orderBy('updated_at', 'desc')->take(50)->get();
+
+        return response($job);
     }
 
     public function getClub() {
@@ -142,17 +161,19 @@ class SiteController extends BaseController {
         return view('site.about')->with('navIndex', -1);
     }
 
+    private function getArticleData($id) {
+        $art = Article::find($id);
+        return $art;
+    }
+
     public function getArticle($id) {
-        return view('site.article')->with('navIndex', -1)->with('id', $id);
+        $art = $this->getArticleData($id);
+        return view('site.article')->with('navIndex', -1)->with('art', $art);
     }
 
     public function getMobile() {
-        return view('site.mobile');
-    }
-
-    public function getArticleData($id) {
-        $art = Article::find($id);
-        return response($art);
+        $job = $this->getAreaJobListData();
+        return view('site.mobile')->with('jobList', $job);
     }
 
 }

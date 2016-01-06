@@ -11,12 +11,11 @@
 |
 */
 
+//Route::group(['middleware' => 'agent'], function () {
+    Route::get('/', 'SiteController@getIndex');
 
-Route::get('/', function () {
-    return view('site.index')->with('navIndex', 0);
-});
-
-Route::controller('site', 'SiteController');
+    Route::controller('site', 'SiteController');
+//});
 
 //Route::group(['prefix' => 'user'], function () {
 //

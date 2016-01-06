@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="_token" content="{{csrf_token()}}">
     <meta property="qc:admins" content="311237732767157776375" />
+    <meta name="keywords" content="即沃，人才咨询，人才服务，人才甄选，背景调查">
+    <meta name="description" content="即沃，中国领先的人才咨询服务机构。目前公司拥有100余名专业顾问，合作的客户主要有在华的500强公司、国有和民营企业、境内外上市公司等，服务行业覆盖50多个细分领域，客户满意率91%以上。">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="/styles/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/bootstrap.replace.css">
@@ -52,8 +57,8 @@
         <div class="wrap">
             <ul>
                 <li @if($navIndex == 0)class="active"@endif><a href="/">首页</a></li>
-                <li @if($navIndex == 1)class="active"@endif><a href="/site/hunter">猎头服务</a></li>
-                <li @if($navIndex == 2)class="active"@endif><a href="/site/train">极速猎车</a></li>
+                <li @if($navIndex == 1)class="active"@endif><a href="/site/hunter">人才服务</a></li>
+                <li @if($navIndex == 2)class="active"@endif><a href="/site/consult">管理咨询</a></li>
                 <li @if($navIndex == 3)class="active"@endif><a href="/site/example">成功案例</a></li>
                 <li @if($navIndex == 4)class="active"@endif><a href="/site/career">职业发展</a></li>
                 <li @if($navIndex == 5)class="active"@endif><a href="/site/club">俱乐部</a></li>
@@ -81,7 +86,7 @@
     <div class="dialog-container" id="easy_contact" style="display: none;">
         <div class="dialog-content width-400 bordered border-width-2 border-color-dark-orange">
             <div class="container-fluid">
-                <div class="row"><p class="padding-10 text-center bg-dark-orange white"><span class="font-110">即沃</span>为您提供专业的猎头咨询服务 <i class="fa fa-times pull-right pointer" id="easy_contact_close"></i></p></div>
+                <div class="row"><p class="padding-10 text-center bg-dark-orange white"><span class="font-110">即沃</span>为您提供专业的人才咨询服务 <i class="fa fa-times pull-right pointer" id="easy_contact_close"></i></p></div>
                 <div class="row">
                     <div class="col-xs-12">
                         <p class="dark-gray"><i class="fa fa-info-circle dark-orange"></i> 请留下您的联系方式，我们将尽快与您联系!</p>
