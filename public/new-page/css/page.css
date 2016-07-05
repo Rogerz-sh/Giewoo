@@ -1,0 +1,49 @@
+html, body { height: 100%; }
+
+.flex { display: flex; }
+.flex.v-center { align-items: center; }
+.flex .f1 { flex: 1; }
+.flex .f2 { flex: 2; }
+.flex .f3 { flex: 3; }
+.flex .f4 { flex: 4; }
+.flex .f5 { flex: 5; }
+.flex .f6 { flex: 6; }
+
+#main { margin-bottom: 60px; }
+#main:after { content: ""; display: block; clear: both; }
+
+#left { float: left; background: #fff; border-radius: 5px; padding: 15px; width: 715px; min-height: 500px; box-shadow: 1px 1px 5px #ddd, -1px -1px 5px #ddd; }
+
+#right { float: right; width: 265px; padding-left: 15px; }
+
+.job-list li { margin-bottom: 20px; }
+.job-list li h4 { width: 100%; position: relative; }
+.job-list .job-title { position: relative; padding-right: 180px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.job-list .job-title + span { position: absolute; top: 0; right: 0; }
+.job-list .job-content { max-height: 60px; overflow: hidden; }
+
+.example-list { margin: 0 -15px; }
+.example-list li:nth-child(2n) { background: #fafafa; }
+.example-list li a { display: block; padding: 15px; }
+
+.art-list { line-height: 1.5em; }
+.art-list li { display: flex; }
+.art-list li .art-img { margin: 10px; width: 150px; height: 90px; }
+.art-list li .art-content { flex: 1; }
+.art-list li .art-content .art-title { position: relative; padding-right: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.art-list li .art-content .art-date { position: absolute; top: 2px; right: 10px; }
+.art-list li .art-content .art-text { font-size: 0.9em; color: #cccccc; max-height: 65px; overflow: hidden; }
+
+.art-more { text-align: center; border: 1px dashed #ccc; line-height: 1.5em; cursor: pointer; border-radius: 2px; padding: 5px 0; margin-top: 20px; }
+.art-more:hover { background: #efefef; }
+
+.side-box { width: 250px; right: 0; background: #fff; border-radius: 5px; padding: 10px; }
+
+.side-list { line-height: 2em; }
+.side-list li { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.side-contact { margin-top: 60px; }
+
+img.image { max-width: 100%; }
+
+.footer { width: 100%; position: absolute; background: #333333; color: #fff; bottom: 0; text-align: center; line-height: 50px; }

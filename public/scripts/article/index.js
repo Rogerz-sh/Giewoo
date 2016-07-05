@@ -17,10 +17,10 @@ $(function () {
             {field: 'id', title: 'ID'},
             {field: 'title', title: '文章标题'},
             {field: 'type', title: '所属类目', template: getType},
-            {field: 'showing', title: '首页显示', template: getStatus},
-            {field: 'publish', title: '发布日期', template: '#:Date.format(publish)#'},
+            //{field: 'showing', title: '首页显示', template: getStatus},
             {field: 'source', title: '来源', template: getSource},
-            {field: 'updated_at', title: '更新时间', template: '#:Date.format(updated_at)#'},
+            {field: 'date', title: '发布日期', template: '#:Date.format(date)#'},
+            //{field: 'updated_at', title: '更新时间', template: '#:Date.format(updated_at)#'},
             {title: '操作', template: '<a href="/article/edit/#:id#" class="btn btn-default btn-sm"><i class="fa fa-pencil"></i></a> ' +
             '<a href="/site/article/#:id#" target="_blank" class="btn btn-info btn-sm"><i class="fa fa-search"></i></a> ' +
             '<a data-id="#:id#" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></a>', width: 140}
@@ -56,9 +56,8 @@ $(function () {
 
     function getType(item) {
         var type = {
-            1: "走近猎头",
-            2: "HR资讯",
-            3: "职场动态",
+            1: "职场动态",
+            2: "即沃学堂",
         };
         return type[item.type];
     }

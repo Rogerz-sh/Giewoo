@@ -18,7 +18,7 @@ class ExampleController extends BaseController {
     }
 
     public function getJsonJobListData () {
-        $data = Example::where('deleted_at', null)->get();
+        $data = Example::orderBy('created_at', 'desc')->get();
         return response($data);
     }
 

@@ -6,7 +6,7 @@
             <div class="row">
                 <ul class="breadcrumb">
                     <li><a href="/manager/">首页</a></li>
-                    <li><a href="/example/">案例管理</a></li>
+                    <li><a href="/example1/">案例管理</a></li>
                     <li>编辑案例</li>
                 </ul>
             </div>

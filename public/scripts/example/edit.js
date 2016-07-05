@@ -4,7 +4,7 @@
 $(function () {
     var today = new Date().format();
 
-    $.$ajax.get('/example/json-job-data/' + $('#id').val(), function (res) {
+    $.$ajax.get('/example1/json-job-data/' + $('#id').val(), function (res) {
         console.log(res);
         for (var name in res) {
             switch (name) {
@@ -109,9 +109,9 @@ $(function () {
     $('button.btn-success').click(function () {
         var data = form.getFormData();
         if (form.validate()) {
-            $.$ajax.post('/example/edit', {'job': data}, function (res) {
+            $.$ajax.post('/example1/edit', {'job': data}, function (res) {
                 $.$modal.alert('保存成功', function () {
-                    location.href = '/example/';
+                    location.href = '/example1/index';
                 });
             });
         }

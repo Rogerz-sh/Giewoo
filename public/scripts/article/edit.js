@@ -7,27 +7,50 @@ $(function () {
     $.$ajax.get('/article/json-article-data/'+id, function (res) {
         for (var name in res) {
             switch (name) {
-                case 'publish':
-                    $('#publish').kendoDatePicker({
+                case 'date':
+                    $('#date').kendoDatePicker({
                         culture: 'zh-CN',
                         format: 'yyyy-MM-dd',
-                        value: res[name],
+                        value: new Date(res[name]),
                         max: today
                     });
                     break;
-                case 'content':
-                    $('#content').kendoEditor({
-                        value: res[name],
-                        domain: document.domain,
-                        encoded: false
-                    });
-                    break;
+                //case 'content':
+                //
+                //    break;
                 case 'type':
                     $('#type option[value="{0}"]'.format(res[name])).prop('selected', true);
                     $('#type').kendoDropDownList();
                     break;
-                case 'showing':
-                    $('input[name="showing"][value="{0}"]'.format(res[name])).prop('checked', true);
+                case 'picture':
+                    var file = res[name], filename = file.split('/').pop(), fileExt = filename.split('.').pop();
+                    $('input[name="picture"]').val(file);
+                    $('#upload').kendoUpload({
+                        async: {
+                            saveUrl: '/page/upload/?_token='+$('meta[name="_token"]').attr('content'),
+                            saveField: 'file'
+                        },
+                        files: [
+                            {name: filename, size: 0, extension: fileExt}
+                        ],
+                        multiple: false,
+                        upload: function (e) {
+                            var files = e.files;
+                            $.each(files, function (i, file) {
+                                if (['.jpg', '.png', '.gif'].indexOf(file.extension.toLowerCase()) < 0) {
+                                    $.$modal.alert('文件格式不符合要求');
+                                    e.preventDefault();
+                                }
+                            });
+                        },
+                        success: function (e) {
+                            var res = e.response;
+                            $('#picture').val(res);
+                        },
+                        error: function (e) {
+                            $('#picture').val('');
+                        }
+                    });
                     break;
                 case 'source':
                     $('input[name="source"][value="{0}"]'.format(res[name])).prop('checked', true);
@@ -67,17 +90,12 @@ $(function () {
                 ]
             },
             {
-                name: 'publish',
-                target: '#publish',
+                name: 'date',
+                target: '#date',
                 type: 'input',
                 rules: [
                     {rule: 'required', errMsg: '发布日期不能为空'}
                 ]
-            },
-            {
-                name: 'keywords',
-                target: '#keywords',
-                type: 'input'
             },
             {
                 name: 'type',
@@ -88,9 +106,12 @@ $(function () {
                 ]
             },
             {
-                name: 'blockquote',
-                target: '#blockquote',
-                type: 'textarea'
+                name: 'picture',
+                target: '#picture',
+                type: 'input',
+                rules: [
+                    {rule: 'required', errMsg: '插图不能为空'}
+                ]
             },
             {
                 name: 'content',
@@ -99,11 +120,6 @@ $(function () {
                 rules: [
                     {rule: 'required', errMsg: '文章正文不能为空'}
                 ]
-            },
-            {
-                name: 'showing',
-                target: 'input[name="showing"]',
-                type: 'radio'
             },
         ]
     });

@@ -10,7 +10,7 @@
                 </ul>
             </div>
             <div class="row margin-bottom-10">
-                <div class="col-xs-1"><a href="/example/create" class="btn btn-success"><i class="fa fa-plus"></i> 新增案例</a></div>
+                <div class="col-xs-1"><a href="/example1/create" class="btn btn-success"><i class="fa fa-plus"></i> 新增案例</a></div>
             </div>
             <div class="row">
                 <div class="col-xs-12">

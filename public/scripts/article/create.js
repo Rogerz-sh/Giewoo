@@ -10,9 +10,32 @@ $(function () {
         value: today,
         max: today
     });
-    $('#content').kendoEditor({
-        domain: document.domain,
-        encoded: false
+    //$('#content').kendoEditor({
+    //    domain: document.domain,
+    //    encoded: false
+    //});
+    $('#upload').kendoUpload({
+        async: {
+            saveUrl: '/page/upload/?_token='+$('meta[name="_token"]').attr('content'),
+            saveField: 'file'
+        },
+        multiple: false,
+        upload: function (e) {
+            var files = e.files;
+            $.each(files, function (i, file) {
+                if (['.jpg', '.png', '.gif'].indexOf(file.extension.toLowerCase()) < 0) {
+                    $.$modal.alert('文件格式不符合要求');
+                    e.preventDefault();
+                }
+            });
+        },
+        success: function (e) {
+            var res = e.response;
+            $('#picture').val(res);
+        },
+        error: function (e) {
+            $('#picture').val('');
+        }
     });
 
     var form = $('#form').$form({
@@ -39,17 +62,12 @@ $(function () {
                 ]
             },
             {
-                name: 'publish',
-                target: '#publish',
+                name: 'date',
+                target: '#date',
                 type: 'input',
                 rules: [
                     {rule: 'required', errMsg: '发布日期不能为空'}
                 ]
-            },
-            {
-                name: 'keywords',
-                target: '#keywords',
-                type: 'input'
             },
             {
                 name: 'type',
@@ -60,9 +78,12 @@ $(function () {
                 ]
             },
             {
-                name: 'blockquote',
-                target: '#blockquote',
-                type: 'textarea'
+                name: 'picture',
+                target: '#picture',
+                type: 'input',
+                rules: [
+                    {rule: 'required', errMsg: '插图不能为空'}
+                ]
             },
             {
                 name: 'content',
@@ -71,11 +92,6 @@ $(function () {
                 rules: [
                     {rule: 'required', errMsg: '文章正文不能为空'}
                 ]
-            },
-            {
-                name: 'showing',
-                target: 'input[name="showing"]',
-                type: 'radio'
             },
         ]
     });

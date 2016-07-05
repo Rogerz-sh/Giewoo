@@ -1,0 +1,182 @@
+.margin-top-10 {margin-top: 10px;}
+.margin-top-20 {margin-top: 20px;}
+.margin-top-30 {margin-top: 30px;}
+.margin-top-40 {margin-top: 40px;}
+.margin-top-50 {margin-top: 50px;}
+.margin-bottom-5 {margin-bottom: 5px;}
+.margin-bottom-10 {margin-bottom: 10px;}
+.margin-bottom-20 {margin-bottom: 20px;}
+.margin-bottom-30 {margin-bottom: 30px;}
+.margin-bottom-40 {margin-bottom: 40px;}
+.margin-bottom-50 {margin-bottom: 50px;}
+
+.red {color: #f45050}
+.font-lg {font-size: 1.2em;}
+.indent {text-indent: 2em;}
+
+/*banner*/
+#banner {position: absolute; width: 100%; height: 30px; top: -40px; background: rgba(0,0,0,.5); overflow: hidden; color: #eee;}
+#banner ul {width: 1100px; position: relative; margin: 0 auto; top: 0; transition: top .3s linear;}
+#banner ul li {display: flex; justify-content: center; line-height: 30px; text-align: center;}
+#banner ul li a {flex: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #fff;}
+#banner ul li a:hover {text-decoration: underline;}
+
+.advBg {position: relative; width: 1000px; height: 150px; background: url("../image/adv_bg.png") no-repeat; margin: 50px auto 0;}
+.advList {list-style: none; margin: 0; padding: 0;}
+.advList li {float: left; display: inline-block; width: 150px; height: 150px; border-radius: 50%; margin-right: 62.5px; /*overflow: hidden;*/ text-align: center; padding-top: 35px;}
+.advList li b {font-size: 1.5em;}
+.advList li:last-child {margin-right: 0;}
+
+.newpc_3_c{ width:1100px; margin:0 auto;}
+.newpc_3_ul{ width:320px; height:37px; margin:40px auto 50px auto;}
+.newpc_3_li{ float:left; width:152px; height:35px; background:#fff; border:1px solid #dedede; font-size:18px; line-height:35px; color:#333; text-align:center; border-radius:5px;
+    cursor:pointer}
+.newpc_3_xd{ background:#4e9cf8; border:1px solid #4e9cf8; color:#fff;}
+.newpc_3_pane{ display:none; width:1100px; height:400px;background:url(../image/flow/flow.png) no-repeat center center;}
+.newpc_3_pane ul li{ width:175px; text-align:center; float:left; cursor:pointer; position: relative;}
+.newpc_3_pane ul li .circle{ width: 100%; height: 25px; position: absolute;}
+.newpc_3_pane ul li .circle::before{ content: '';display: block; position: absolute; margin-left: 72px; width: 25px; height: 25px; background: rgba(0,0,0,.7); border-radius: 50%;}
+.newpc_3_pane ul li:hover .circle::before{ background: #5e9ff7;}
+.newpc_3_pane ul li h2{ font-size:20px; line-height:20px; color:#666;}
+.newpc_3_pane ul li h3{ font-size:14px; line-height:24px; color:#808080;}
+.newpc_3_pane ul li em{ display:block; width:83px; height:83px; margin-left:auto; margin-right:auto;}
+.qy_tb1{background:url(../image/flow/s1_1.png) no-repeat;}
+.qy_tb2{background:url(../image/flow/s2_1.png) no-repeat;}
+.qy_tb3{background:url(../image/flow/s3_1.png) no-repeat;}
+.qy_tb4{background:url(../image/flow/s4_1.png) no-repeat;}
+.qy_tb5{background:url(../image/flow/s5_1.png) no-repeat;}
+.qy_tb6{background:url(../image/flow/s6_1.png) no-repeat;}
+
+/*Service Flow*/
+.newpc_3_center_li1{ margin-left:5px; margin-top:155px;}
+.newpc_3_center_li1 em{ margin-top:50px; margin-bottom:10px;}
+.newpc_3_center_li1 .circle{ margin-top:13px;}
+.newpc_3_center_li1:hover .qy_tb1{background:url(../image/flow/s1_2.png) no-repeat;}
+.newpc_3_center_li1:hover h2{ color:#2c86e3;}
+
+.newpc_3_center_li2{ margin-left:5px; margin-top:45px; }
+.newpc_3_center_li2 em{ margin-top:50px; margin-bottom:55px;}
+.newpc_3_center_li2 .circle{ margin-top:-40px;}
+.newpc_3_center_li2 h3{ margin-top:12px;}
+.newpc_3_center_li2:hover .qy_tb2{background:url(../image/flow/s2_2.png) no-repeat;}
+.newpc_3_center_li2:hover h2{ color:#2c86e3;}
+
+.newpc_3_center_li3{ margin-left:5px; margin-top:125px;}
+.newpc_3_center_li3 em{ margin-top:50px; margin-bottom:10px;}
+.newpc_3_center_li3 .circle{ margin-top:13px;}
+.newpc_3_center_li3:hover .qy_tb3{background:url(../image/flow/s3_2.png) no-repeat;}
+.newpc_3_center_li3:hover h2{ color:#2c86e3;}
+
+.newpc_3_center_li4{ margin-left:5px; margin-top:5px;}
+.newpc_3_center_li4 h2{ margin-bottom:5px;}
+.newpc_3_center_li4 em{ margin-top:10px; margin-bottom:50px;}
+.newpc_3_center_li4 .circle{ margin-top:-35px;}
+.newpc_3_center_li4:hover .qy_tb4{background:url(../image/flow/s4_2.png) no-repeat;}
+.newpc_3_center_li4:hover h2{ color:#2c86e3;}
+
+.newpc_3_center_li5{ margin-left:5px; margin-top:145px;}
+.newpc_3_center_li5 em{ margin-top:50px; margin-bottom:10px;}
+.newpc_3_center_li5 .circle{ margin-top:13px;}
+.newpc_3_center_li5:hover .qy_tb5{background:url(../image/flow/s5_2.png) no-repeat;}
+.newpc_3_center_li5:hover h2{ color:#2c86e3;}
+
+.newpc_3_center_li6{ margin-left:5px; margin-top:75px; }
+.newpc_3_center_li6 em{ margin-top:50px; margin-bottom:55px;}
+.newpc_3_center_li6 .circle{ margin-top:-40px;}
+.newpc_3_center_li6 h3{ margin-top:12px;}
+.newpc_3_center_li6:hover .qy_tb6{background:url(../image/flow/s6_2.png) no-repeat;}
+.newpc_3_center_li6:hover h2{ color:#2c86e3;}
+
+/*Successful Cases*/
+.cases {width: 100%; height: 400px; display: flex; box-sizing: border-box; border: 1px solid #ddd;}
+.cases a.more {position: absolute; right: 30px; bottom: 15px; display: block; padding: 3px 5px; background: #d5f3fb; color: #1fa4d2;}
+.c-side {width: 200px; box-sizing: border-box; border-right: 1px solid #ddd; padding-top: 10px; background: #eee;}
+.c-side li {line-height: 35px; text-align: right; padding-right: 15px; cursor: pointer;}
+.c-side li:hover, .c-side li.active {background: #a2cefc; color: #00a7d4; border-right: 2px solid #00a7d4;}
+.c-main {flex: 1; padding: 15px 30px;}
+.c-content {display: none; text-align: left;}
+.c-content.active {display: block;}
+.c-content .c-title {text-align: center; background: #efefef; padding: 3px 0 2px;}
+.c-content p {line-height: 30px;}
+.c-content span {background: #d5f3fb; padding: 2px 5px 3px; color: #1fa4d2;}
+.c-content p img {vertical-align: top; margin-bottom: 10px; margin-right: 10px;}
+
+/*Job List*/
+.jobList {width: 640px; height: 510px; float: left; position: relative;}
+.jobList.fr {float: right;}
+.jobTitle {list-style: none; float: left; position: absolute; top: -81px; left: 15px;}
+.jobList.fr .jobTitle {float: right; left: inherit; right: 15px;}
+.jobTitle li {float: left; position: relative; cursor: pointer; margin-right: 20px; padding: 15px; background: #fff; border-radius: 5px 5px 0 0; border: 1px solid #ccc; border-bottom: none;transition: all .3s linear;}
+.jobTitle li.active {background: #fe8900; border-color: #fe8900;}
+.jobTitle li img {float: left;}
+.jobTitle li div.img {float: left; width: 50px; height: 50px;}
+.jobTitle li div.img.j01 {background: url("/new-page/image/job/network_1.png") no-repeat center; background-size: cover;}
+.jobTitle li div.img.j02 {background: url("/new-page/image/job/finance_1.png") no-repeat center; background-size: cover;}
+.jobTitle li div.img.j03 {background: url("/new-page/image/job/energy_1.png") no-repeat center; background-size: cover;}
+.jobTitle li div.img.j04 {background: url("/new-page/image/job/electronic_1.png") no-repeat center; background-size: cover;}
+.jobTitle li div.img.j05 {background: url("/new-page/image/job/city_1.png") no-repeat center; background-size: cover;}
+.jobTitle li div.img.j06 {background: url("/new-page/image/job/car_1.png") no-repeat center; background-size: cover;}
+.jobTitle li div.img.j07 {background: url("/new-page/image/job/shopping_1.png") no-repeat center; background-size: cover;}
+.jobTitle li div.img.j08 {background: url("/new-page/image/job/movie_1.png") no-repeat center; background-size: cover;}
+.jobTitle li div.img.j09 {background: url("/new-page/image/job/box_1.png") no-repeat center; background-size: cover;}
+.jobTitle li div.img.j10 {background: url("/new-page/image/job/plane_1.png") no-repeat center; background-size: cover;}
+.jobTitle li.active div.img.j01 {background-image: url("/new-page/image/job/network_2.png");}
+.jobTitle li.active div.img.j02 {background-image: url("/new-page/image/job/finance_2.png");}
+.jobTitle li.active div.img.j03 {background-image: url("/new-page/image/job/energy_2.png");}
+.jobTitle li.active div.img.j04 {background-image: url("/new-page/image/job/electronic_2.png");}
+.jobTitle li.active div.img.j05 {background-image: url("/new-page/image/job/city_2.png");}
+.jobTitle li.active div.img.j06 {background-image: url("/new-page/image/job/car_2.png");}
+.jobTitle li.active div.img.j07 {background-image: url("/new-page/image/job/shopping_2.png");}
+.jobTitle li.active div.img.j08 {background-image: url("/new-page/image/job/movie_2.png");}
+.jobTitle li.active div.img.j09 {background-image: url("/new-page/image/job/box_2.png");}
+.jobTitle li.active div.img.j10 {background-image: url("/new-page/image/job/plane_2.png");}
+
+.jobTitle li label {position: absolute; text-align: center; bottom: -20px; left: 50%; transform: translateX(-50%); color: #999; font-size: 0.9em; white-space: nowrap;}
+.jobContent {display: none; height: 480px; margin-top: 50px; padding: 0 15px;}
+.jobContent.active {display: block;}
+.jobDesc {display: flex; align-items: center; padding: 7px 10px; margin-bottom: 10px; box-shadow: 2px 2px 5px #ddd, -1px -1px 5px #ddd; border-radius: 2px; transition: box-shadow .5s linear;}
+.jobDesc:hover {box-shadow: 2px 2px 5px #4e9cf8, -1px -1px 5px #4e9cf8;}
+.jobLeft {flex: 2; line-height: 1.5em;}
+.jobRight {flex: 1; text-align: right;}
+.jobDesc .j1 {font-size: 1.2em; font-weight: bold; color: #4e9cf8;}
+.jobDesc .j1>a {color: #4e9cf8;}
+.jobDesc .j2 {font-size: 0.8em; color: #999; float: right;}
+.jobDesc .j3 {color: #666;}
+.jobDesc .j4 {font-size: 0.8em; color: #999; float: right;}
+.jobDesc .j5 {font-size: 1.5em; font-weight: bold; color: #ee8e12;}
+.jobLogo {position: absolute; bottom: 0; left: 0; float: left; margin: 0 0 0 20px;}
+.jobList.fr .jobLogo {float: right; right: 0; left: inherit; margin: 0 20px 0 0;}
+.jobLogo li {float: left; text-align: center; width: 70px; margin-right: 50px;}
+.jobLogo li:last-child {margin-right: 0;}
+.jobLogo li img {width: 70px; height: 70px;}
+.jobLogo li label {line-height: 30px; color: #666; font-weight: bold; clear: both;}
+
+/*side float tools*/
+.v-align { display: table; }
+.v-align > * { display: table-cell; vertical-align: middle; }
+#side-tools { position: fixed; right: 0; top: 40%; z-index: 999;}
+#side-tools ul { width: 60px; border: 1px solid #FF6B01; }
+#side-tools ul li { width: 100%; text-align: center; height: 60px; background: #FF6B01; color: #fff; cursor: pointer; }
+#side-tools ul li:not(:last-child) { border-bottom: 1px solid #FEF143; }
+#side-tools ul li:last-child { background: #fff; color: #FF6B01; }
+#side-tools ul li.side-tools-handler .side-tools-hide { display: none; position: absolute; max-width: 200px; right: 85px; min-height: 60px; background: #FF6B01; width: 160px;}
+#side-tools ul li.side-tools-handler .side-tools-hide>div { color: #fff; text-align: center; line-height: 2em; padding: 10px;}
+#side-tools ul li.side-tools-handler .side-tools-hide:after { content: ""; display: block; position: absolute; width: 0; height: 0; border: 20px solid #FF6B01; border-right-color: transparent; border-bottom-color: transparent; border-top-color: transparent; top: 10px; right: -40px; }
+#side-tools ul li.side-tools-handler:hover .side-tools-hide { display: block; }
+
+/*baidu qiao*/
+/*#nb_invite_wrap {visibility: hidden;}*/
+#nb_invite_wrap {display: block; width: 400px; height:240px !important;background:url('../image/invite_bg.png') no-repeat center/cover !important;}
+#nb_invite_wrap .nb-invite-body {height: 0 !important;}
+#nb_invite_wrap:before {content: '即沃猎头 - 中国领先的猎头机构'; color: #333; text-shadow: 1px 1px 5px #fff, -1px -1px 5px #fff; font-size: 1.5em; font-weight: bold; display: block; position: absolute; top: 40px; left: 10px;}
+#nb_invite_wrap:after {content: '全国服务热线：400-670-7725'; color: #666; text-shadow: 1px 1px 5px #fff, -1px -1px 5px #fff; font-size: 1.4em; font-weight: bold; display: block; position: absolute; top: 100px; left: 10px;}
+#nb_invite_wrap .nb-invite-text {display: none !important;}
+/*[class*="qiao-icon"] {display: none !important;}*/
+/*#nb-invite-wrap.nb-invite-wrap {width:360px !important; height: 240px; margin: -120px 0 0 -180px;border: 1px solid #fff;*/
+    /*background:url('../image/invite_bg.png') no-repeat center/cover;}*/
+/*#nb-invite-wrap.nb-invite-wrap:before {content: '中国领先的猎头机构';display: block; position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: rgba(0,0,0,.3); font-size: 2.5em; color: #fff; padding-left: 20px; line-height: 200px;}*/
+/*#nb-invite-wrap.nb-invite-wrap .nb-invite-decoration {height:98px;display:none;}*/
+/*#nb-invite-wrap.nb-invite-wrap .nb-invite-text {left:48px;}*/
+/*#nb-invite-wrap.nb-invite-wrap .nb-invite-accept {display: block; opacity: 1;overflow: hidden; width: 96px; height: 36px; line-height: 36px; bottom: 10px; right: 10px; color: #fff; background: #00A8DA;}*/
+/*#nb-invite-wrap.nb-invite-wrap .nb-invite-reject {display: block; opacity: 1;overflow: hidden; width: 96px; height: 36px; line-height: 36px; bottom: 10px; right: 120px;}*/
+/*#nb-invite-wrap.nb-invite-wrap .nb-invite-close {top: 10px; right: 10px;}*/

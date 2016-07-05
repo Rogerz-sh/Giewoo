@@ -86,9 +86,9 @@ $(function () {
     $('button.btn-success').click(function () {
         var data = form.getFormData();
         if (form.validate()) {
-            $.$ajax.post('/example/create', {'job': data}, function (res) {
+            $.$ajax.post('/example1/create', {'job': data}, function (res) {
                 $.$modal.alert('保存成功', function () {
-                    location.href = '/example/';
+                    location.href = '/example1/index';
                 });
             });
         }

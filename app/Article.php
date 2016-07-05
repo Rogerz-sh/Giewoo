@@ -9,5 +9,5 @@ class Article extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'articles';
+    protected $table = 'articles_new';
 }

@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-xs-4">
                     <div class="col-xs-10 col-xs-offset-1 bg-orange border-radius-5 text-center padding-20">
-                        <h3><a class="white" href="/example/index"><i class="fa fa-trophy"></i> 案例管理</a></h3>
+                        <h3><a class="white" href="/example1/index"><i class="fa fa-trophy"></i> 案例管理</a></h3>
                     </div>
                 </div>
             </div>

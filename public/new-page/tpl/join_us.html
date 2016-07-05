@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://www.mobanker.com/tpl/join_us.html?_=1461813831193 -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        $(function(){
+            //获取职位ID
+            $('.jobCategory li').on('click', function(){
+                var _type = $(this).attr('data-type');
+                $('.jobCategory li').removeClass('on');
+                $(this).addClass('on');
+
+                var aItem = [];
+                var aJobDetail = [];
+                //职位名称筛选
+                $('.jobItem li').hide();
+                $('.jobItem li').each(function(){
+                    if( $(this).attr('data-type') == _type ){
+                        aItem.push($(this).index());
+                        $(this).show();
+                    }
+                });
+                //职位详情
+                $('.jobDesc').hide();
+                $('.jobDesc').each(function(){
+                    if( $(this).attr('data-type') == _type ){
+                        aJobDetail.push($(this).index());
+                    }
+                });
+                //全部显示
+                if(_type == 'all'){
+                    $('.jobItem li').each(function(){
+                        aItem.push($(this).index());
+                    });
+                    $('.jobItem li').show();
+
+                    $('.jobDesc').show();
+                    $('.jobDesc').each(function(){
+                        aJobDetail.push($(this).index());
+                    });
+                }
+
+                for(var i=0;i<aItem.length;i++){
+                    $('.jobItem li').eq(aItem[i]).removeClass('on');
+                }
+                currentJob(aItem, aJobDetail);
+            });
+
+            function currentJob(aItem, aJobDetail, num){
+                for(var i=0;i<aJobDetail.length;i++){
+                    $('.jobDesc').eq(aJobDetail[i]).hide();
+                }
+                if(!num){
+                    num = 0;
+                }
+                $('.jobItem li').eq(aItem[num]).addClass('on');
+                $('.jobDesc').eq(aJobDetail[num]).show();
+                for(var i=0;i<aItem.length;i++){
+                    $('.jobItem li').eq(aItem[i]).attr('data-index', aItem[i]);
+                    $('.jobItem li').eq(aItem[i]).on('click', function(){
+                        for(var m=0;m<aItem.length;m++){
+                            $('.jobItem li').eq(aItem[m]).removeClass('on');
+                            $('.jobDesc').eq(aJobDetail[m]).hide();
+                        }
+                        $(this).addClass('on');
+                        console.log($(this).attr('data-index'));
+                        $('.jobDesc').eq($(this).attr('data-index')).show();
+                    });
+                }
+            }
+
+            //默认加载
+            (function(){
+                var aItem = [];
+                var aJobDetail = [];
+                var initIndex = $('.iframe').attr('data-index');
+
+                $('.jobItem li').each(function(){
+                    aItem.push($(this).index());
+                });
+                $('.jobDesc').each(function(){
+                    aJobDetail.push($(this).index());
+                });
+                currentJob(aItem, aJobDetail, initIndex);
+            })();
+        })
+    </script>
+</head>
+<body>
+    <div id="tplJoin">
+        <div id="jobCategory" class="jobCategory">
+            <ul class="clear">
+                <li class="on" data-type="all">全部类别<i>（14）</i></li>
+                <li data-type="technology">技术类<i>（8）</i></li>
+                <li data-type="risk">风险控制<i>（4）</i></li>
+                <li data-type="civilian">文职类<i>（2）</i></li>
+            </ul>
+        </div>
+        <div class="jobDetail clear">
+            <ul id="jobItem" class="jobItem">
+                <li data-type="technology">WEB前端开发工程师</li>
+                <li data-type="technology">iOS开发工程师</li>
+                <li data-type="technology">Android开发工程师</li>
+                <li data-type="technology">PHP软件开发工程师</li>
+                <li data-type="technology">JAVA开发工程师</li>
+                <li data-type="technology">系统集成中级工程师</li>
+                <li data-type="technology">系统集成初级工程师</li>
+                <li data-type="technology">数据系统工程师</li>
+                <li data-type="risk">信贷审批员</li>
+                <li data-type="risk">风险政策岗</li>
+                <li data-type="risk">风险系统规划师</li>
+                <li data-type="risk">电话催收员</li>
+                <li data-type="civilian">客服专员</li>
+                <li data-type="civilian">会计</li>
+            </ul>
+            <div id="jobText" class="jobText">
+                <div class="jobDesc" data-type="technology" data-title="WEB前端开发工程师">
+                    <p>
+                        <strong>岗位职责：</strong><br>
+                        1、配合团队完成公司及产品网站的web开发，以及美工的设计类工作；<br>
+                        2、切割页面，用DIV+CSS架构网页，配合序员合作共同完成网站建设，确保网页界面与设计效果图保持一致；<br>
+                        3、设计、制作各种网页静态平面页面；<br>
+                        4、设计、制作页面相关的EDM、Flash动画、广告、按钮等页面图形等宣传素材。<br><br>
+                        <strong>岗位要求:</strong><br>
+                        1、熟练运用Html、Javascript、DIV+CSS编写网页，熟悉各种浏览器的兼容性；<br>
+                        2、对设计软件有一定了解或应用经验：如Adobe Photoshop、Flash、Illustrator、Premiere、Dream Weaver、Css等；<br>
+                        3、具有一定的设计能力，能够把握页面的整体风格及细节表现；<br>
+                        4、有手机网页开发经验优先。<br><br><br>
+                    </p>
+                    <strong>若干人</strong>
+                    <p class="mailUs">请将您的个人简历发送至:【招聘邮箱】<a>hr@mobanker.com</a>，我们将尽快联系您；</p>
+                </div>
+                <div class="jobDesc" data-type="technology" data-title="iOS开发工程师" style="display: none;">
+                    <p>
+                        <strong>岗位职责：</strong><br>
+                        1、负责IOS平台上应用产品的架构设计和开发；<br>
+                        2、负责平台相关的调试，配置以及Bug的修正。<br><br>
+                        <strong>岗位要求：</strong><br>
+                        1、计算机相关专业，专科以上学历；<br>
+                        2、熟悉IOS系统构架,具备独立开发能力;<br>
+                        3、关注苹果产品，对互联网充满激情；<br>
+                        4、具备扎实的Objective C、C/C++基础；熟悉XCode开发环境；<br>
+                        5、熟悉APP Store上架规则；<br>
+                        6、熟悉网络通讯程序，熟悉Webservice、Socket、http编程；<br>
+                        7、熟悉移动互联网应用开发流程;<br>
+                        8、思路清晰，思维敏捷，快速的学习能力,能承担较大工作压力,二年以上工作经验。<br><br><br>
+                    </p>
+                    <strong>若干人</strong>
+                    <p class="mailUs">请将您的个人简历发送至:【招聘邮箱】<a>hr@mobanker.com</a>，我们将尽快联系您；</p>
+                </div>
+                <div class="jobDesc" data-type="technology" data-title="Android开发工程师" style="display: none;">
+                    <p>
+                        <strong>岗位职责：</strong><br>
+                        1、负责Android台上应用产品的架构设计和开发.<br>
+                        2、负责平台相关的调试，配置以及Bug的修正；
+                        <br><br><strong>岗位要求：</strong><br>
+                        1、计算机相关专业，专科以上学历；<br>
+                        2、熟悉Android系统构架,Android软件开发具备良好的Java技术功底,熟悉Android系统构架,具备独立开发能力;<br>
+                        3、熟悉网络通讯程序，熟悉Webservice、Socket、http编程；<br>
+                        4、熟悉移动互联网应用开发流程;<br>
+                        5、思路清晰，思维敏捷，快速的学习能力,能承担较大工作压力,二年以上工作经验。<br><br><br>
+                    </p>
+                    <strong>2人</strong>
+                    <p class="mailUs">请将您的个人简历发送至:【招聘邮箱】<a>hr@mobanker.com</a>，我们将尽快联系您；</p>
+                </div>
+                <div class="jobDesc" data-type="technology" data-title="PHP软件开发工程师" style="display: none;">
+                    <p>
+                        <strong>工作职责：</strong><br>
+                        1、负责项目经理指定的技术研发任务，测试工作和研发改进工作；<br>
+                        2、负责将前端工程师开发好的网站/手机wap站的静态html页面转换成php页面，以及页面跳转控制逻辑开发；<br>
+                        3、与后端工程师协作，完成数据交互、动态展现；<br><br>
+                        <strong>任职资格：</strong><br>
+                        1、2年及以上IT行业经验，1年及以上网站开发经验；<br>
+                        2、熟悉PHP网站开发，有相应的项目经验；<br>
+                        3、熟悉手机wap站开发，有相应的项目经验；<br>
+                        4、严谨、细心，有良好的沟通能力，有团队协作项目经验，能在较大工作压力的情况下按时按质完成工作。<br><br><br>
+                    </p>
+                    <strong>3人</strong>
+                    <p class="mailUs">请将您的个人简历发送至:【招聘邮箱】<a>hr@mobanker.com</a>，我们将尽快联系您；</p>
+                </div>
+                <div class="jobDesc" data-type="technology" data-title="JAVA开发工程师" style="display: none;">
+                    <p>
+                        <strong>岗位职责：</strong><br>
+                        1、公司应用服务器端开发；<br>
+                        2、根据项目需要快速学习并掌握新技术；<br>
+                        3、及时与策划人员、测试人员做好沟通，保证项目的进度和质量；<br>
+                        4、能够独立撰写开发文档；<br>
+                        5、能够熟练使用单元测试。<br><br>
+                        <strong>岗位要求：</strong><br>
+                        1、本科以上学历，计算机相关专业，3年以上工作经验；<br>
+                        2、熟练掌握 java 语言(java 并发处理，java 并发包的使用, java7 网络)；<br>
+                        3、熟悉 mysql / ORACLE数据库，熟练掌握 sql 语句，了解数据库调优；<br>
+                        4、熟悉 linux 系统，可以编写 shell 者优先；<br>
+                        5、擅于沟通，具备团队合作精神，稳定的工作态度；<br>
+                        6、对金融行业有一定兴趣，有金融产品开发经验者优先。<br><br><br>
+                    </p>
+                    <strong>若干人</strong>
+                    <p class="mailUs">请将您的个人简历发送至:【招聘邮箱】<a>hr@mobanker.com</a>，我们将尽快联系您；</p>
+                </div>
+                <div class="jobDesc" data-type="technology" data-title="系统集成中级工程师" style="display: none;">
+                    <p>
+                        <strong>岗位职责：</strong><br>
+                        1、集成与测试部署衔接；<br>
+                        2、持续集成框架与部署机制持续改进；<br>
+                        3、持续集成编译、部署、打包脚本编写维护。<br><br>
+                        <strong>岗位要求：</strong><br>
+                        1、本科及以上学历，计算机/电子工程或类似专业；<br>
+                        2、熟悉软件版本管理工具，精通git/svn/hg/cvs/vss等版本管理工具中至少一种；<br>
+                        3、了解软件持续构建/持续集成/自动部署的原理和相关知识，对于持续集成平台jenkins/CruiseControl和DamageControl；<br>
+                        4、精通python/perl/ruby/shell至少一种脚本编程；<br>
+                        5、了解php/java/手机客户端软件的部署过程和工作原理；<br>
+                        6、有互联网云平台运维和分布式部署经验者优先；<br>
+                        7、工作认真，细心，负责，乐于沟通；静得下心思，守得住追求。<br><br><br>
+                    </p>
+                    <strong>若干人</strong>
+                    <p class="mailUs">请将您的个人简历发送至:【招聘邮箱】<a>hr@mobanker.com</a>，我们将尽快联系您；</p>
+                </div>
+                <div class="jobDesc" data-type="technology" data-title="系统集成初级工程师" style="display: none;">
+                    <p>
+                        <strong>岗位职责：</strong><br>
+                        1、版本管理工具日常工作与维护；<br>
+                        2、持续集成平台与工具维护；<br>
+                        3、集成测试环境管理与维护。<br><br>
+                        <strong>岗位要求：</strong><br>
+                        1、大专及以上学历，专业不限,计算机专业优先；<br>
+                        2、对于软件持续集成与持续部署过程有一定了解，有互联网软件集成开发工作经验者优先；<br>
+                        3、热爱 IT 行业，务实进取，善于学习，乐于交流；<br>
+                        4、具备python/perl/ruby/shell至少一种脚本编程能力；<br>
+                        5、工作认真、细心、负责，有较强的沟通及表达能力，较强的团队合作精神。<br><br><br>
+                    </p>
+                    <strong>若干人</strong>
+                    <p class="mailUs">请将您的个人简历发送至:【招聘邮箱】<a>hr@mobanker.com</a>，我们将尽快联系您；</p>
+                </div>
+                <div class="jobDesc" data-type="technology" data-title="数据系统工程师" style="display: none;">
+                    <p>
+                        <strong>岗位职责：</strong><br>
+                        1、负责数据仓库ETL/ODS/EDW系统开发规范、流程制定及完善：<br>
+                        A) 制定并完善ETL/ODS系统数据采集、入仓及EDW基础层的开发规范、标准及流程；<br>
+                        B) 制定并完善统一调度平台的开发规范、标准和流程。<br><br>
+                        2、负责数据仓库ETL/ODS/EDW数据开发及系统管理：<br>
+                        A) 负责数据仓库ETL/ODS系统数据采集、入仓及EDW基础层数据需求开发及上线；<br>
+                        B) 负责数据仓库系统开发、分析环境的系统管理；<br>
+                        C) 负责数据仓库系统数据生命周期规划、管理及实施；<br>
+                        D) 负责BI类系统统一调度平台管理；<br>
+                        E) 按照流程完成ETL/ODS/EDW需求的投产，并对生产故障进行分析与排查，解决各种生产问题，保障软件的顺利运行；<br>
+                        F) 负责ETL/ODS数据采集、入仓及EDW基础层开发工作任务的分配、跟踪、结果审核。<br><br>
+                        3、负责卡中心数据仓库ETL/ODS/EDW系统技术培训：<br>
+                        A) 负责ETL/ODS系统数据采集、入仓及EDW基础层开发规范、流程的培训；<br>
+                        B) 负责数据仓库系统统一调度平台使用技术培训。<br><br>
+                        <strong>岗位要求:</strong><br>
+                        1、本科以上学历；<br>
+                        2、其中2年以上的数据类系统开发或管理经验；<br>
+                        3、熟悉信息系统架构；<br>
+                        4、熟悉至少一种数据库软件系统，精通其SQL语言数据处理；<br>
+                        5、熟悉ETL相关工作及工作流调度工具，熟悉至少一种ETL工具；<br>
+                        6、熟悉数据仓库实施方法论；<br>
+                        7、性格开朗，团队协作意识强，具有亲和力并能够承受一定的工作压力、富有工作激情。<br><br><br>
+                    </p>
+                    <strong>若干人</strong>
+                    <p class="mailUs">请将您的个人简历发送至:【招聘邮箱】<a>hr@mobanker.com</a>，我们将尽快联系您；</p>
+                </div>
+                <div class="jobDesc" data-type="risk" data-title="信贷审批员" style="display: none;">
+                    <p>
+                        <strong>岗位职责：</strong><br>
+                        1、一年以上P2P公司、银行或小贷公司审批工作经验。<br>
+                        2、对贷款产品创新、信贷政策、操作流程和操作规范提出合理建议。<br>
+                        3、根据调查结果及综合情况在审批权限内进行审批。<br><br>
+                        <strong>岗位要求:</strong><br>
+                        1、金融和经济相关专业优先；<br>
+                        2、有银行、金融相关从业经历者优先；<br>
+                        3、具备一定的信贷知识，有一定的贷款分析及风险防范能力；<br>
+                        4、具备良好的个人品质和职业道德；<br>
+                        5、工作严谨、负责、积极主动，善于沟通。<br><br><br>
+                    </p>
+                    <strong>5人</strong>
+                    <p class="mailUs">请将您的个人简历发送至:【招聘邮箱】<a>hr@mobanker.com</a>，我们将尽快联系您；</p>
+                </div>
+                <div class="jobDesc" data-type="risk" data-title="风险政策岗" style="display: none;">
+                    <p>
+                        <strong>岗位职责：</strong><br>
+                        1、在数据分析和充分调研基础上，评估、研究和起草风险管理政策.制定和调整个人信贷审批政策，控制信贷风险，提高信贷盈利能力；<br>
+                        2、完善消费信贷风险管理流程，牵头建立消费信贷风险监控体系；保证相关政策的正确性和有效性；<br>
+                        3、开展新客户群引入测试项目，制定测试项目信贷审批政策，组织监控测试开展情况，完成测试项目结案报告，确定测试项目下一步应用方式；<br>
+                        4、完善信贷内控管理制度；<br>
+                        5、参与监控信贷审批系统作业质量，提出改进措施建议；<br>
+                        6、参与重大项目中涉及信贷风险管理及相关政策、流程和制度的制定及调整工作。<br><br>
+                        <strong>岗位要求:</strong><br>
+                        1、全日制本科以上学历，经济、数学、金融、统计等相关专业；性格开朗、工作主动细致、善于沟通，能够承受较大的工作压力；<br>
+                        2、熟悉银行或信用卡风险管理业务运营流程，有政策制定经验者为佳；<br>
+                        3、二年以上风险管理工作经验，具有熟练数据分析解读经验，具有较强的文字表达能力优先；<br>
+                        4、较强的逻辑思维能力与语言表达能力，熟练操作办公软件；<br>
+                        5、熟悉信用卡审批流程者优先。<br><br><br>
+                    </p>
+                    <strong>5人</strong>
+                    <p class="mailUs">请将您的个人简历发送至:【招聘邮箱】<a>hr@mobanker.com</a>，我们将尽快联系您；</p>
+                </div>
+                <div class="jobDesc" data-type="risk" data-title="风险系统规划师" style="display: none;">
+                    <p>
+                        <strong>岗位职责：</strong><br>
+                        1、编写和维护系统规则，维护系统正常运行；<br>
+                        2、对于各类项目报批进行审批，并且将其编整入电子化审批系统之中，负责跟进整个项目进件的审批处理过程，做好项目备案；<br>
+                        3、负责审批和催收系统优化，系统流程搭建和监控。<br><br>
+                        <strong>岗位要求:</strong><br>
+                        1、全日制本科及以上学历，3年以上工作年限；<br>
+                        2、熟悉银行或者信用卡审批流程；<br>
+                        3、熟练操作办公软件；<br>
+                        4、良好的人际沟通协调能力；较高的书面表达能力；较高的综合分析能力；<br>
+                        5、较强的逻辑思维能力、创新能力以及高度的责任心。<br><br><br>
+                    </p>
+                    <strong>2人</strong>
+                    <p class="mailUs">请将您的个人简历发送至:【招聘邮箱】<a>hr@mobanker.com</a>，我们将尽快联系您；</p>
+                </div>
+                <div class="jobDesc" data-type="risk" data-title="电话催收员" style="display: none;">
+                    <p>
+                        <strong>岗位职责：</strong><br>
+                        1、根据培训要求，以专业﹑规范程序信贷逾期帐款；<br>
+                        2、登记催收情况，获取、更新与催收对象相关的资料信息；<br>
+                        3、运用专业的技巧去回答及处理客户的问题，并就客户的疑问给予相应的解决方案；<br>
+                        4、配合公司其他员工完成定期部门任务；<br>
+                        5、完成上级安排的其他工作。<br><br>
+                        <strong>岗位要求:</strong><br>
+                        1、法律、金融专业优先，有电销和客服经验的优先，能熟练操作计算机；<br>
+                        2、1年以上工作或实习经验,具备同行业相关工作经验者优先考虑；<br>
+                        3、良好的学习能力及较强的人际沟通及沟通技巧；<br>
+                        4、个性开朗，能够在压力下工作和愿意接受挑战；<br>
+                        5、具有良好的道德素质和敬业精神，无不良工作记录。<br><br><br>
+                    </p>
+                    <strong>4人</strong>
+                    <p class="mailUs">请将您的个人简历发送至:【招聘邮箱】<a>hr@mobanker.com</a>，我们将尽快联系您；</p>
+                </div>
+                <div class="jobDesc" data-type="civilian" data-title="客服专员" style="display: none;">
+                    <p>
+                        <strong>岗位职责：</strong><br>
+                        1、受理及主动电话客户，能够及时发现客户问题并给到正确和满意的回复；<br>
+                        2、具备处理问题、跟进进程、沟通及疑难问题服务的意识跟能力，最大限度的提高客户满意度。遇到不能解决的问题按流程提交相人员或主管处理，并跟踪进展直至解决；<br>
+                        3、及时反馈客户对产品的意见和建议；<br>
+                        4、不断接受公司的各项业务和技能提升培训；<br><br>
+                        <strong>岗位要求：</strong><br>
+                        1、有一定客户服务工作经验或销售经验，有一定的客户服务知识和能力 ；<br>
+                        2、要求一定要有“客户为先”的服务精神，一切从帮助客户、满足客户角度出发；<br>
+                        3、性格要求沉稳、隐忍，善于倾听，有同理心，乐观、积极。普通话标准、流利，反应灵敏；<br>
+                        4、热爱工作，敬业、勤恳，乐于思考，具有自我发展的主观愿望和自我学习能力；<br>
+                        5、此岗为见习岗位，30岁以下上海户籍人员。<br><br><br>
+                    </p>
+                    <strong>若干人</strong>
+                    <p class="mailUs">请将您的个人简历发送至:【招聘邮箱】<a>hr@mobanker.com</a>，我们将尽快联系您；</p>
+                </div>
+                <div class="jobDesc" data-type="civilian" data-title="会计" style="display: none;">
+                    <p>
+                        <strong>岗位职责：</strong><br>
+                        1、熟悉总账会计岗位的工作流程及工作内容；<br>
+                        2、按结算制度、第三方支付结算流程，负责公司业务结算事宜；<br>
+                        3、审核所有公司报销单据的合理、合规性；以及网银审核授权付款操作流程；<br>
+                        4、审核公司所有的凭证及报表，并出具相关的内部报表和财务报告；<br>
+                        5、对公司财务进行监管、结账并报税；<br>
+                        6、加强银行及税务等其他职能部门的联络联系。<br><br>
+                        <strong>岗位要求：</strong><br>
+                        1、财务、审计、金融等相关专业，大专以上学历；<br>
+                        2、三年以上结算、财务工作经验，有互联网或金融行业财务、结算工作经验优先；<br>
+                        3、熟悉国家有关财务、会计、税收政策、实务，熟悉会计核算具备的财务信息统计、分析能力；<br>
+                        4、熟悉使用财务软件及office办公软件，对用友财务软件有实操经验者优先；<br>
+                        5、诚实敬业、工作认真严谨、责任心强、坚持原则，具备良好的沟通、协调、学习能力。<br><br><br>
+                    </p>
+                    <strong>若干人</strong>
+                    <p class="mailUs">请将您的个人简历发送至:【招聘邮箱】<a>hr@mobanker.com</a>，我们将尽快联系您；</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="qq-sendUrl-btn"></div></body></html>

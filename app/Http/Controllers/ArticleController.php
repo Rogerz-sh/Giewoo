@@ -32,7 +32,7 @@ class ArticleController extends BaseController {
         foreach ($art as $key=>$value) {
             $article->$key = $value;
         }
-        $article->created_by = Session::get('name');
+        $article->created_by = Session::get('id');
         $article->save();
         return response($article->id);
     }
@@ -52,7 +52,7 @@ class ArticleController extends BaseController {
         foreach ($art as $key=>$value) {
             $article->$key = $value;
         }
-        $article->updated_by = Session::get('name');
+        $article->created_by = Session::get('id');
         $article->save();
         return response($article->id);
     }

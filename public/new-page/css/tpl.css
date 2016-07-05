@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+.tpl{height: 100%;}
+
+/* 前隆简介 */
+#tplUs{height: 450px;background: url("/new-page/image/water.gif") repeat-x center 315px;}
+#tplUs>div {padding: 0 30px; max-height: 300px; overflow: auto; line-height: 1.5em;}
+#tplUs a.view {display: inline-block; position: relative; left: 50%; padding: 7px 15px; background: #d43f3a; color: #fff; margin: 30px 0; transform: translateX(-50%);}
+.process{position: relative;padding-top: 60px;overflow: hidden;}
+#timeLine{position: relative;width: 100%;padding-top: 150px;height: 50px;margin: 0 auto;background: url("/new-page/image/tpl/icon-timeline-line.png") repeat-x 0 158px;}
+#timeLine .btn{position: absolute;left: 20px;right: 20px;top: 25px;height: 36px;}
+#timeLine .btn a{display: block;width: 32px;height: 32px;background: #7fc766 url("/new-page/image/tpl/icon-timeline-arrow.png") no-repeat;}
+#timeLine .btn a.next{background-position: 15px -36px;}
+#timeLine .btn a.prev{background-position: 12px 0;}
+#dates{width: 100%;height: 50px;}
+#dates li{float: left;width: 140px;text-align: center;}
+#dates a{display: block;height: 20px;line-height: 20px;padding-top: 30px;background: url("/new-page/image/tpl/icon-timeline-dot.png") no-repeat center 0;color: #2d2d2d;}
+#dates a.on{background: url("/new-page/image/tpl/icon-timeline-ondot.png") no-repeat center 0;color: #7fc766;font-weight: bold;}
+
+.isSues{position: absolute;top: 0;left: 50%;width: 520px;margin-left: -260px;background: url("/new-page/image/tpl/icon-timeline-line2.png") repeat-y center bottom;overflow: hidden;}
+#issues{height: 150px;}
+#issues li{float: left;width: 520px;height: 50px;background-color: #f3f3f3;border-bottom: 2px solid #7fc766;padding: 15px 0;}
+#issues li span{display: block;padding: 0 10px;text-align: center;font-size: 15px;color: #747474;line-height: 25px;}
+
+/* 新闻资讯 */
+.tplNews{max-width: 1000px;min-width: 1000px;margin: 0 auto;color: #333;}
+.tplNews .tips{line-height: 20px;text-align: center;color: #7d5d26;font-size: 12px;}
+.tplNews .tips span{display: inline-block;margin: 0 5px;}
+.tplNews .tips label{display: inline-block;background: url("/new-page/image/icon-news.png") no-repeat;padding-left: 20px;}
+.tplNews .container{padding-top: 30px;line-height: 24px;}
+
+/* 加入我们 */
+.jobCategory{height: 41px;border-bottom: 1px solid #ccc;margin: 20px 0;}
+.jobCategory ul{padding-left: 30px;}
+.jobCategory li{float: left;height: 40px;line-height: 40px;border: 1px solid #e8e8e8;padding: 0 20px;background-color: #fbfbfb;font-weight: bold;cursor: pointer;}
+.jobCategory li.on{background-color: #fff;border-color: #ccc;border-bottom-color: #fff;}
+.jobCategory li i{color: #09c;font-size: 12px;}
+
+.jobDetail{width: 650px;min-height: 503px;margin: 0 auto;border: solid #d2d9dc;border-width: 1px 0;background-color: #fff;overflow: hidden;}
+.jobItem{float: left;width: 180px;height: 503px;}
+.jobItem li{height: 35px;line-height: 35px;border-bottom: 1px solid #d2d9dc;padding-right: 20px;text-align: right;cursor: pointer;}
+.jobItem li.on{width: 160px;border-right: 1px solid #f4f7f8;background-color: #f4f7f8;color: #ee8e13;}
+
+.jobText{float: left;width: 409px;min-height: 443px;padding: 30px;border-left: 1px solid #d2d9dc;background-color: #f4f7f8;line-height: 24px;color: #333;}
+.mailUs{padding-top: 30px;}
+.mailUs a{color: #09c;text-decoration: underline;}
+
+
+/* 团队详情 */
+.tplTeam{width: 600px;padding: 20px 30px 0 30px;overflow: hidden;}
+.tplTeam ul{width: 700px;margin: 20px 0 0 -20px;}
+.tplTeam li{float: left;width: 310px;margin: 0 0 20px 20px;overflow: hidden;}
+.tplTeam img{width: 100%;}

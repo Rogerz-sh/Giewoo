@@ -12,9 +12,26 @@
 */
 
 //Route::group(['middleware' => 'agent'], function () {
-    Route::get('/', 'SiteController@getIndex');
+    Route::get('/', 'PageController@getIndex');
 
     Route::controller('site', 'SiteController');
+
+    Route::controller('page', 'PageController');
+
+    Route::get('/research/{id?}', 'PageController@getResearch');
+
+    Route::get('/dynamic/{id?}', 'PageController@getDynamic');
+
+    Route::get('/job/{id?}', 'PageController@getJob');
+
+    Route::get('/jobs/{id?}', 'PageController@getJobList');
+
+    Route::get('/job/{id}', 'PageController@getJobView');
+
+    Route::get('/examples', 'PageController@getExampleList');
+
+    Route::get('/example/{id}', 'PageController@getExampleView');
+
 //});
 
 //Route::group(['prefix' => 'user'], function () {
@@ -58,7 +75,7 @@ Route::group(['middleware' => 'manager'], function () {
 
     Route::controller('article', 'ArticleController');
 
-    Route::controller('example', 'ExampleController');
+    Route::controller('example1', 'ExampleController');
 
     Route::controller('message', 'MessageController');
 

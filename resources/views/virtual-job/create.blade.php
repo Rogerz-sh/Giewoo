@@ -145,10 +145,14 @@
                                     <option value="">请选择</option>
                                     <option value="1">IT & 互联网</option>
                                     <option value="2">金融</option>
-                                    <option value="3">房地产</option>
-                                    <option value="4">机械制造</option>
-                                    <option value="5">文件 & 养老 & 健康</option>
+                                    <option value="3">房地产 & 建筑 & 建材</option>
+                                    <option value="4">汽车 & 机械制造</option>
+                                    <option value="5">文件 & 旅游 & 健康</option>
                                     <option value="6">消费品</option>
+                                    <option value="7">化工 & 环保 & 能源</option>
+                                    <option value="8">广告 & 传媒 & 教育</option>
+                                    <option value="9">交通 & 贸易 & 物流</option>
+                                    <option value="10">通信 & 电子 & 硬件</option>
                                 </select>
                             </div>
                         </div>
