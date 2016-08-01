@@ -131,7 +131,7 @@
 .jobTitle li.active div.img.j09 {background-image: url("/new-page/image/job/box_2.png");}
 .jobTitle li.active div.img.j10 {background-image: url("/new-page/image/job/plane_2.png");}
 
-.jobTitle li label {position: absolute; text-align: center; bottom: -20px; left: 50%; transform: translateX(-50%); color: #999; font-size: 0.9em; white-space: nowrap;}
+.jobTitle li h6 {position: absolute; text-align: center; bottom: -20px; left: 50%; transform: translateX(-50%); color: #999; font-size: 0.9em; white-space: nowrap;}
 .jobContent {display: none; height: 480px; margin-top: 50px; padding: 0 15px;}
 .jobContent.active {display: block;}
 .jobDesc {display: flex; align-items: center; padding: 7px 10px; margin-bottom: 10px; box-shadow: 2px 2px 5px #ddd, -1px -1px 5px #ddd; border-radius: 2px; transition: box-shadow .5s linear;}
@@ -149,7 +149,10 @@
 .jobLogo li {float: left; text-align: center; width: 70px; margin-right: 50px;}
 .jobLogo li:last-child {margin-right: 0;}
 .jobLogo li img {width: 70px; height: 70px;}
-.jobLogo li label {line-height: 30px; color: #666; font-weight: bold; clear: both;}
+.jobLogo li h4 {line-height: 30px; color: #666; font-weight: bold; clear: both;}
+
+.jobLogo li.more {padding: 30px 30px 0 0;}
+.jobLogo li.more a {color: orangered; display: inline-block; border: 1px solid #d43f3a; padding: 5px;}
 
 /*side float tools*/
 .v-align { display: table; }

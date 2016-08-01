@@ -17,6 +17,12 @@ jQuery(document).ready(function($){
         old = t;
     });
 
+    //网站导航
+    //$('#menu li a[data-target]').click(function () {
+    //    var target = $(this).data('target');
+    //    document.body.scrollTop = $('#'+target).offset().top;
+    //});
+
     //百度商桥弹出窗口
     $('.opener').click(function () {
         window.open('http://p.qiao.baidu.com/im/index?siteid=8948819&ucid=18532798');
@@ -123,9 +129,10 @@ jQuery(document).ready(function($){
 
     //职位切换面板
     $('.jobTitle').delegate('li', 'click', function () {
-        var idx = $(this).data('index');
+        var idx = $(this).data('index'), industry = $(this).data('industry');
         $(this).addClass('active').siblings().removeClass('active');
         $(this).parents('.jobList').find('.jobContent').removeClass('active').eq(idx).addClass('active');
+        $(this).parents('.jobList').find('li.more a').attr('href', '/jobs/' + industry)
     });
 
 
@@ -134,12 +141,12 @@ jQuery(document).ready(function($){
         var idx = $(this).data('index');
         $(this).addClass('active').siblings('label').removeClass('active');
         $('.mediaReportsList').find('ul').removeClass('active').eq(idx).addClass('active');
-    })
+    });
 
 
     //第一屏视差滚动
     $('#home').css('height', $(window).height() + 'px');
-    var iOffsetTop = $('#server').offset().top,
+    var iOffsetTop = $('#job').offset().top,
         iSHeight = $(window).height(),
         iTotalTop = iSHeight + iOffsetTop;
     $(window).scroll(function(){
@@ -187,45 +194,11 @@ jQuery(document).ready(function($){
         $('.fixPic').css('background-position', 'center '+posY+'px');
 
         //加入我们，添加飞机动画
-        var joinUsTop = $('#join').offset().top;
+        var joinUsTop = $('#server').offset().top;
         if(iTop > joinUsTop - 300){
             $('.plane').addClass('ant');
         }
     });
-
-    ////右侧滚动浮点
-    //var navLabel = new Array('首页', '我们', '资讯', '服务', '团队', '加入');
-    //$('#giewoo').pageScroller(
-    //    {
-    //        navigation: navLabel
-    //    }
-    //);
-    //var flag = true;
-    //$('.pageScroll').on('click', function(){
-    //    if(flag){
-    //        $(this).find('li').show();
-    //        $(this).addClass('icon-menu_close');
-    //        flag = false;
-    //    }
-    //    else{
-    //        $(this).find('li').hide();
-    //        $(this).removeClass('icon-menu_close');
-    //        flag = true;
-    //    }
-    //});
-    //$('.pageScroll li').on('click', function(){
-    //    return false;
-    //});
-    //
-    ////导航锚点
-    //$('.menu a, .moveDown').each(function(){
-    //    $(this).on('click', function(){
-    //        var area = $(this).attr('data-area')
-    //        $("body,html").animate({
-    //            scrollTop: $('#'+area).offset().top
-    //        }, 800);
-    //    })
-    //});
 
     //load
     $('.load').each(function(){
@@ -380,55 +353,3 @@ function picsMove(container){
         $('#'+container).trigger('forward');
     });
 }
-
-
-//百度地图
-//创建和初始化地图函数：
-// function initMap() {
-//     createMap();//创建地图
-//     setMapEvent();//设置地图事件
-//     addMapControl();//向地图添加控件
-//     addMapOverlay();//向地图添加覆盖物
-// }
-// function createMap() {
-//     map = new BMap.Map("map");
-//     map.centerAndZoom(new BMap.Point(121.513684, 31.257397), 18);
-// }
-// function setMapEvent() {
-//     map.enableScrollWheelZoom();
-//     map.enableKeyboard();
-//     map.enableDragging();
-// }
-// function addClickHandler(target, window) {
-//     target.addEventListener("click", function () {
-//         target.openInfoWindow(window);
-//     });
-// }
-// function addMapOverlay() {
-//     var markers = [
-//         {content: "地址：上海市虹口区东大名路1050号绿地北外滩中心9楼", title: "上海前隆金融信息服务有限公司", imageOffset: {width: -46, height: -21}, position: {lat: 31.257181, lng: 121.513486}}
-//     ];
-//     for (var index = 0; index < markers.length; index++) {
-//         var point = new BMap.Point(markers[index].position.lng, markers[index].position.lat);
-//         var marker = new BMap.Marker(point, {icon: new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png", new BMap.Size(20, 25), {
-//             imageOffset: new BMap.Size(markers[index].imageOffset.width, markers[index].imageOffset.height)
-//         })});
-//         var label = new BMap.Label(markers[index].title, {offset: new BMap.Size(25, 5)});
-//         var opts = {
-//             width: 200,
-//             title: markers[index].title,
-//             enableMessage: false
-//         };
-//         var infoWindow = new BMap.InfoWindow(markers[index].content, opts);
-//         marker.setLabel(label);
-//         addClickHandler(marker, infoWindow);
-//         map.addOverlay(marker);
-//     }
-// }
-// //向地图添加控件
-// function addMapControl() {
-//     var navControl = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE});
-//     //map.addControl(navControl);
-// }
-// var map;
-// initMap();

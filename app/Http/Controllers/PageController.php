@@ -112,12 +112,12 @@ class PageController extends BaseController {
 
     private function getArticleListData() {
         $article1 = DB::table('articles_new')
-            ->select('id', 'title', 'picture', 'content', 'type')
+            ->select(DB::raw('id, title, picture, substr(content,1,50) as content, type'))
             ->where('deleted_at', null)->where('type', 1)
             ->orderBy('date', 'desc')->take(8);
 
         $article2 = DB::table('articles_new')
-            ->select('id', 'title', 'picture', 'content', 'type')
+            ->select(DB::raw('id, title, picture, substr(content,1,50) as content, type'))
             ->where('deleted_at', null)->where('type', 2)
             ->orderBy('date', 'desc')->take(8);
 

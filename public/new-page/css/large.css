@@ -21,8 +21,10 @@ a{text-decoration: none;}
 .fixedTopBar{position: fixed;top: 3em;}
 .logo{z-index: 4;position: absolute;left: 4em;top: 1em;}
 
-.menu{z-index: 300;position: fixed;right: 3rem;top: 3em;width: 75px;display: none;}
-.icon-menu{display: block;height: 65px;background-color: rgba(0,172,255,.3);}
+.menu{z-index: 300;position: fixed;right: 4rem;top: 3em;width: 75px;}
+.menu ul {display: none;}
+.menu:hover ul {display: block;}
+.icon-menu{display: block;line-height: 65px;background-color: rgba(0,172,255,.3);text-align: center; color: #fff; font-size: 3em;}
 .menu a{display: block;height: 65px;line-height: 65px;background-color: #ecf0f4;border-bottom: 1px solid #d4dce2;color: #3c3c3c;font-size: 1em;text-align: center;}
 .menu a:hover{color: #f90;}
 
@@ -146,9 +148,9 @@ a{text-decoration: none;}
 .usHead{position: relative;}
 .usHead li{float: left;width: 33%;text-align: center;}
 .usHead li:nth-child(2){width: 34%;}
-.usHead li label{z-index: 3;position: relative;display: inline-block;height: 100%;background-color: #fff;padding: 0 15px;color: #c1c1c1;font-size: 24px;font-weight: bold;cursor: pointer;}
+.usHead li h4{z-index: 3;position: relative;display: inline-block;height: 100%;background-color: #fff;padding: 0 15px;color: #c1c1c1;font-size: 24px;font-weight: bold;cursor: pointer;}
 .usHead li i{display: block;line-height: 20px;font-size: 12px;text-transform: uppercase;color: #d1d1d1;font-weight: normal;}
-.usHead li.on label{color: #333;}
+.usHead li.on h4{color: #333;}
 .usHead li.on i{color: #666;}
 .usHead .line{z-index: 1;position: absolute;left: 0;top: 42px;display: block;width: 100%;height: 1px;background-color: #ddd;}
 
@@ -216,11 +218,11 @@ a{text-decoration: none;}
 .mediaReportsList li{float: left;width: 245px;margin: 0 0 40px 40px;overflow: hidden;}
 .mediaReportsList li>a{float: left;width: 245px;background: url("../image/article_dl_bg.png") no-repeat 0 0;cursor: pointer;}
 .mediaReportsList li>a:hover{background-position: -245px 0;}
-.mediaReportsList label{display: block;height: 36px;line-height: 18px;padding-left: 38px;font-size: 15px;font-weight: bold;overflow: hidden;cursor: pointer;}
+.mediaReportsList h5{display: block;height: 36px;line-height: 18px;padding-left: 38px;font-size: 15px;font-weight: bold;overflow: hidden;cursor: pointer;}
 .mediaReportsList .desc{display: block;height: 32px;line-height: 16px;padding-right: 40px;margin: 8px 0 10px 0;font-size: 12px;color: #666;overflow: hidden;}
 .mediaReportsList .pic{display: block;width: 235px;height: 125px;background: url("../image/media_reports_pic_bg.png") no-repeat 0 0;padding: 15px 6px 6px;}
 .mediaReportsList li>a{color: #333;}
-.mediaReportsList li>a:hover label{color: #62bc66;}
+.mediaReportsList li>a:hover h5{color: #62bc66;}
 .mediaReportsList p {display: block; clear:both; text-align: center; margin-top: -20px;}
 .mediaReportsList p>a:hover {color:#0066cc;}
 
@@ -361,14 +363,14 @@ a{text-decoration: none;}
 .teamList li a{position: relative;display: block;height: 230px;padding-top: 60px;color: #333;overflow: hidden;}
 .teamList li a:hover{color: #f45050;}
 .teamList li span{position: absolute;left: 0;top: 0;font-family: Tahoma;}
-.teamList li strong{display: block;font-size: 48px;line-height: 35px;}
-.teamList li label{position: absolute;top: 30px;right: 0;font-size: 24px;}
+.teamList li b{display: block;font-size: 48px;line-height: 35px;}
+.teamList li strong{position: absolute;top: 30px;right: 0;font-size: 24px;}
 .teamList li i{position: absolute;left: 42px;bottom: -3px;display: block;width: 48px;height: 46px;background: url("../image/icon-team.png") no-repeat 0 0;}
 .teamList li img{width: 100%;}
 
 
 /* ****************************** 加入 ****************************** */
-#join{width: 100%;border-top: 10px solid #00a7d4;/*background: url("../image/join_us_bg.jpg") no-repeat center 0;*/}
+#server{width: 100%;border-top: 10px solid #00a7d4;/*background: url("../image/join_us_bg.jpg") no-repeat center 0;*/}
 .joinContainer{position: relative;width: 100%;padding-bottom: 50px;text-align: center;}
 .viewAllJobs{display: block;width: 150px;height: 50px;line-height: 50px;background-color: #2cd48f;margin: 50px auto;border-radius: 6px;font-size: 18px;color: #fff;}
 .viewAllJobs:hover{background-color: #2bd858;}
@@ -455,7 +457,7 @@ a{text-decoration: none;}
 
 
 /* ****************************** 页脚 ****************************** */
-.footer{z-index: 200;position: relative;width: 100%;height: 80px;line-height: 80px;background-color: #575b5f;text-align: center;font-size: 12px;color: #d0d3d6;}
+.footer{z-index: 200;position: relative;width: 100%;height: 50px;line-height: 50px;background-color: #999;text-align: center;font-size: 12px;color: #d0d3d6;}
 .footer a{color: #d0d3d6;}
 .footer a:hover{color: #fff;text-decoration: underline;}
 .shjbzx{position:absolute;right:10px;top:20px;display: block;width: 105px;height: 40px;}

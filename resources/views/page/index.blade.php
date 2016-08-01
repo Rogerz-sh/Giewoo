@@ -16,11 +16,16 @@
     <link rel="stylesheet" type="text/css" href="/new-page/css/video.css">
     <link rel="stylesheet" type="text/css" href="/new-page/css/tpl.css"/>
     <link rel="stylesheet" type="text/css" href="/new-page/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/new-page/css/sitemap.css"/>
+
 </head>
 <body>
     <!--<div class="loading">-->
         <!--<img src="/new-page/image/loading.gif"/>-->
     <!--</div>-->
+    <div class="logo">
+        <img src="/new-page/images/logo.jpg" alt="即沃咨询－中国领先的猎头服务机构" width="121" height="75" />
+    </div>
     <div id="side-tools">
         <ul>
             <li class="v-align side-tools-click opener"><div><i class="fa fa-comment fa-2x"></i><br>咨询</div></li>
@@ -43,14 +48,14 @@
         <div class="topBar">
             <a href="/"><img class="logo" src="/new-page/image/logo_g.png" alt="即沃咨询"/></a>
         </div>
-        <div class="menu">
-            <i class="icon-menu"></i>
+        <div class="menu" id="menu">
+            <i class="icon-menu fa fa-list"></i>
             <ul class="clear">
-                <li><a data-area="us" href="javascript:void(0);">我们</a></li>
-                <li><a data-area="article" href="javascript:void(0);">资讯</a></li>
-                <li><a data-area="server" href="javascript:void(0);">服务</a></li>
-                <li><a data-area="team" href="javascript:void(0);">团队</a></li>
-                <li><a data-area="join" href="javascript:void(0);">加入</a></li>
+                <li><a href="#us">我们</a></li>
+                <li><a href="#server">服务</a></li>
+                <li><a href="#job">职位</a></li>
+                <li><a href="#article">资讯</a></li>
+                <li><a href="#team">团队</a></li>
             </ul>
         </div>
 
@@ -65,7 +70,7 @@
                 <!--<p class="iconDown"><a data-area="us" class="moveDown" href="javascript:void(0);"><img src="/new-page/image/icon-arrow-down.png"/></a></p>-->
                 <img class="bigLogo" src="/new-page/image/home_logo_bg.png"/>
                 <div class="flash">
-                    <i class="t1"><img src="/new-page/image/home_txt_a.png"/></i>
+                    <i class="t1"><img src="/new-page/image/home_txt_a.png" alt="即联商界 沃植良才 中国领先的猎头服务机构"/></i>
                 </div>
             </div>
         </div>
@@ -88,9 +93,9 @@
             <div class="about min">
                 <div class="usHead max">
                     <ul class="clear">
-                        <li><label>即沃文化<i>Giewoo Culture</i></label></li>
-                        <li class="on"><label>即沃简介<i>Giewoo Introduction</i></label></li>
-                        <li><label>即沃优势<i>Giewoo Advantage</i></label></li>
+                        <li><h4>即沃文化<i>Giewoo Culture</i></h4></li>
+                        <li class="on"><h4>即沃简介<i>Giewoo Introduction</i></h4></li>
+                        <li><h4>即沃优势<i>Giewoo Advantage</i></h4></li>
                     </ul>
                     <i class="line"></i>
                 </div>
@@ -124,22 +129,22 @@
                             <div class="pics">
                                 <div id="informationPics" class="picBox">
                                     <ul class="clear">
-                                        <li><img src="/new-page/image/us/u01.jpg"/></li>
-                                        <li><img src="/new-page/image/us/u08.jpg"/></li>
-                                        <li><img src="/new-page/image/us/u03.jpg"/></li>
-                                        <li><img src="/new-page/image/us/bradley.png"/></li>
+                                        <li><img src="/new-page/image/us/u01.jpg" alt="办公环境1"/></li>
+                                        <li><img src="/new-page/image/us/u08.jpg" alt="办公环境2"/></li>
+                                        <li><img src="/new-page/image/us/u03.jpg" alt="办公环境3"/></li>
+                                        <li><img src="/new-page/image/us/bradley.png" alt="高级合伙人：Bradley"/></li>
                                         <li class="ceo">
                                             <h3 class="margin-bottom-5"><b>Bradley：</b>高级合伙人</h3>
                                             <p>开普敦大学硕士学位。在知名投行、外资上市公司担任高层管理，并且拥有超过十年的高端人才招聘经验。在Bradley的带领下，即沃加强了与世界500强公司之间的猎头合作，为客户引进了包括总经理、投资副总裁，营销副总、CFO、战略总经理等高端优秀人才、从而有力地推动了他们在中国地区的业务发展。</p>
                                         </li>
-                                        <li><img src="/new-page/image/us/chris.png"/></li>
+                                        <li><img src="/new-page/image/us/chris.png" alt="高级合伙人：Chris"/></li>
                                         <li class="ceo">
                                             <h3 class="margin-bottom-5"><b>Chris：</b>高级合伙人</h3>
                                             <p>慕尼黑大学硕士学位。曾在全球著名的管理咨询公司担任高层管理，擅长为客户提供人力资源战略解决方案。作为即沃咨询香港总经理，Chris推动了公司业务的快速成长。从香港到国内开设了10多个分支机构，已有超过3000家国内外知名企业选择即沃作为人才战略合作伙伴。</p>
                                         </li>
-                                        <li><img src="/new-page/image/us/u05.jpg"/></li>
-                                        <li><img src="/new-page/image/us/u09.jpg"/></li>
-                                        <li><img src="/new-page/image/us/u10.png"/></li>
+                                        <li><img src="/new-page/image/us/u05.jpg" alt="办公环境4"/></li>
+                                        <li><img src="/new-page/image/us/u09.jpg" alt="办公环境5"/></li>
+                                        <li><img src="/new-page/image/us/u10.png" alt="办公环境6"/></li>
                                     </ul>
                                 </div>
                                 <p class="picBtn">
@@ -174,27 +179,27 @@
                 <div class="pContainer max">
                     <h3 class="itemNav"><label>合作单位<small>Giewoo Partners</small></label><i></i></h3>
                     <p>
-                        {{--<a href="javascript:;"><img src="/new-page/image/custom/c01.jpg" width="140" height="60"/></a>--}}
-                        {{--<a href="javascript:;"><img src="/new-page/image/custom/c02.png" width="140" height="60"/></a>--}}
-                        <a href="javascript:;"><img src="/new-page/image/custom/c03.png" width="140" height="60"/></a>
-                        <a href="javascript:;"><img src="/new-page/image/custom/c04.png" width="140" height="60"/></a>
-                        <a href="javascript:;"><img src="/new-page/image/custom/c05.png" width="140" height="60"/></a>
-                        <a href="javascript:;"><img src="/new-page/image/custom/c06.png" width="140" height="60"/></a>
-                        <a href="javascript:;"><img src="/new-page/image/custom/c07.png" width="140" height="60"/></a>
-                        <a href="javascript:;"><img src="/new-page/image/custom/c08.png" width="140" height="60"/></a>
-                        {{--<a href="javascript:;"><img src="/new-page/image/custom/c09.png" width="140" height="60"/></a>--}}
-                        <a href="javascript:;"><img src="/new-page/image/custom/c10.png" width="140" height="60"/></a>
-                        {{--<a href="javascript:;"><img src="/new-page/image/custom/c11.png" width="140" height="60"/></a>--}}
-                        {{--<a href="javascript:;"><img src="/new-page/image/custom/c12.png" width="140" height="60"/></a>--}}
-                        {{--<a href="javascript:;"><img src="/new-page/image/custom/c13.png" width="140" height="60"/></a>--}}
-                        {{--<a href="javascript:;"><img src="/new-page/image/custom/c14.png" width="140" height="60"/></a>--}}
-                        <a href="javascript:;"><img src="/new-page/image/custom/c15.png" width="140" height="60"/></a>
-                        <a href="javascript:;"><img src="/new-page/image/custom/c16.png" width="140" height="60"/></a>
-                        <a href="javascript:;"><img src="/new-page/image/custom/c17.png" width="140" height="60"/></a>
-                        <a href="javascript:;"><img src="/new-page/image/custom/c18.png" width="140" height="60"/></a>
-                        <a href="javascript:;"><img src="/new-page/image/custom/c19.png" width="140" height="60"/></a>
-                        <a href="javascript:;"><img src="/new-page/image/custom/c20.png" width="140" height="60"/></a>
-                        <a href="javascript:;"><img src="/new-page/image/custom/c21.png" width="140" height="60"/></a>
+                        {{--<a href="javascript:;"><img src="/new-page/image/custom/c01.jpg" alt="办公环境 alt="" width="140" height="60"/></a>--}}
+                        {{--<a href="javascript:;"><img src="/new-page/image/custom/c02.png" alt="" width="140" height="60"/></a>--}}
+                        <a href="javascript:;"><img src="/new-page/image/custom/c03.png" alt="波导" width="140" height="60"/></a>
+                        <a href="javascript:;"><img src="/new-page/image/custom/c04.png" alt="房品汇" width="140" height="60"/></a>
+                        <a href="javascript:;"><img src="/new-page/image/custom/c05.png" alt="贯通云网" width="140" height="60"/></a>
+                        <a href="javascript:;"><img src="/new-page/image/custom/c06.png" alt="海外U" width="140" height="60"/></a>
+                        <a href="javascript:;"><img src="/new-page/image/custom/c07.png" alt="九鼎投资" width="140" height="60"/></a>
+                        <a href="javascript:;"><img src="/new-page/image/custom/c08.png" alt="玖富" width="140" height="60"/></a>
+                        {{--<a href="javascript:;"><img src="/new-page/image/custom/c09.png" alt="" width="140" height="60"/></a>--}}
+                        <a href="javascript:;"><img src="/new-page/image/custom/c10.png" alt="唯品会" width="140" height="60"/></a>
+                        {{--<a href="javascript:;"><img src="/new-page/image/custom/c11.png" alt="" width="140" height="60"/></a>--}}
+                        {{--<a href="javascript:;"><img src="/new-page/image/custom/c12.png" alt="" width="140" height="60"/></a>--}}
+                        {{--<a href="javascript:;"><img src="/new-page/image/custom/c13.png" alt="" width="140" height="60"/></a>--}}
+                        {{--<a href="javascript:;"><img src="/new-page/image/custom/c14.png" alt="" width="140" height="60"/></a>--}}
+                        <a href="javascript:;"><img src="/new-page/image/custom/c15.png" alt="CMIG" width="140" height="60"/></a>
+                        <a href="javascript:;"><img src="/new-page/image/custom/c16.png" alt="中天嘉华" width="140" height="60"/></a>
+                        <a href="javascript:;"><img src="/new-page/image/custom/c17.png" alt="大唐电信" width="140" height="60"/></a>
+                        <a href="javascript:;"><img src="/new-page/image/custom/c18.png" alt="东湖高新" width="140" height="60"/></a>
+                        <a href="javascript:;"><img src="/new-page/image/custom/c19.png" alt="博天环境" width="140" height="60"/></a>
+                        <a href="javascript:;"><img src="/new-page/image/custom/c20.png" alt="新文化" width="140" height="60"/></a>
+                        <a href="javascript:;"><img src="/new-page/image/custom/c21.png" alt="公安部第三研究所" width="140" height="60"/></a>
                     </p>
                 </div>
                 <div class="partners-text max">
@@ -215,14 +220,14 @@
         </div>
 
         <!--第3屏，服务-->
-        <div id="join" class="min section">
+        <div id="server" class="min section">
             <h1 class="navTitle navJoin">服务<small>Our Services</small></h1>
             <div class="join min">
                 <div class="usHead max">
                     <ul class="clear">
-                        <li><label>服务流程<i>Service Flow</i></label></li>
-                        <li class="on"><label>成功案例<i>Successful Cases</i></label></li>
-                        <li><label>增值服务<i>Value-added Services</i></label></li>
+                        <li><h4>服务流程<i>Service Flow</i></h4></li>
+                        <li class="on"><h4>成功案例<i>Successful Cases</i></h4></li>
+                        <li><h4>增值服务<i>Value-added Services</i></h4></li>
                     </ul>
                     <i class="line"></i>
                 </div>
@@ -1003,7 +1008,7 @@
         </div>
 
         <!--第4屏，职位-->
-        <div id="server" class="server min section">
+        <div id="job" class="server min section">
             <h1 class="navTitle navSer">职位<small>Positions</small></h1>
             <div class="fixPic p1"></div>
             <div class="appDetail">
@@ -1013,25 +1018,25 @@
                     </div>
                     <div class="jobList fr">
                         <ul class="jobTitle">
-                            <li data-index="0" class="active">
+                            <li data-index="0" data-industry="1" class="active">
                                 <div class="img j01"></div>
-                                <label>IT/互联网</label>
+                                <h6>IT/互联网</h6>
                             </li>
-                            <li data-index="1">
+                            <li data-index="1" data-industry="2">
                                 <div class="img j02"></div>
-                                <label>金融</label>
+                                <h6>金融</h6>
                             </li>
-                            <li data-index="2">
+                            <li data-index="2" data-industry="7">
                                 <div class="img j03"></div>
-                                <label>化工/环保/能源</label>
+                                <h6>化工/环保/能源</h6>
                             </li>
-                            <li data-index="3">
+                            <li data-index="3" data-industry="10">
                                 <div class="img j04"></div>
-                                <label>通信/电子/信息</label>
+                                <h6>通信/电子/信息</h6>
                             </li>
-                            <li data-index="4">
+                            <li data-index="4" data-industry="3">
                                 <div class="img j05"></div>
-                                <label>房产/建筑/建材</label>
+                                <h6>房产/建筑/建材</h6>
                             </li>
                         </ul>
                         <div class="jobContent active"><!--01IT/互联网-->
@@ -1150,21 +1155,24 @@
                             </ul>
                         </div>
                         <ul class="jobLogo">
+                            <li class="more">
+                                <a href="/jobs/1" target="_blank">更多职位</a>
+                            </li>
                             <li>
                                 <img src="/new-page/image/job/专业团队.png" alt="">
-                                <label>专业团队</label>
+                                <h4>专业团队</h4>
                             </li>
                             <li>
                                 <img src="/new-page/image/job/专业服务.png" alt="">
-                                <label>专业服务</label>
+                                <h4>专业服务</h4>
                             </li>
                             <li>
                                 <img src="/new-page/image/job/专业流程.png" alt="">
-                                <label>专业流程</label>
+                                <h4>专业流程</h4>
                             </li>
                             <li>
                                 <img src="/new-page/image/job/快速体验.png" alt="">
-                                <label>快速体验</label>
+                                <h4>快速体验</h4>
                             </li>
                         </ul>
                     </div>
@@ -1179,25 +1187,25 @@
                     </div>
                     <div class="jobList">
                         <ul class="jobTitle">
-                            <li data-index="0" class="active">
+                            <li data-index="0" data-industry="4" class="active">
                                 <div class="img j06"></div>
-                                <label>汽车/机械/制造</label>
+                                <h6>汽车/机械/制造</h6>
                             </li>
-                            <li data-index="1">
+                            <li data-index="1" data-industry="6">
                                 <div class="img j07"></div>
-                                <label>消费品</label>
+                                <h6>消费品</h6>
                             </li>
-                            <li data-index="2">
+                            <li data-index="2" data-industry="8">
                                 <div class="img j08"></div>
-                                <label>广告/传媒/教育</label>
+                                <h6>广告/传媒/教育</h6>
                             </li>
-                            <li data-index="3">
+                            <li data-index="3" data-industry="9">
                                 <div class="img j09"></div>
-                                <label>交通/贸易/物流</label>
+                                <h6>交通/贸易/物流</h6>
                             </li>
-                            <li data-index="4">
+                            <li data-index="4" data-industry="5">
                                 <div class="img j10"></div>
-                                <label>文化/旅游/健康</label>
+                                <h6>文化/旅游/健康</h6>
                             </li>
                         </ul>
                         <div class="jobContent active"><!--04汽车/机械/制造-->
@@ -1318,19 +1326,22 @@
                         <ul class="jobLogo">
                             <li>
                                 <img src="/new-page/image/job/专业效率.png" alt="">
-                                <label>专业效率</label>
+                                <h4>专业效率</h4>
                             </li>
                             <li>
                                 <img src="/new-page/image/job/精准推荐.png" alt="">
-                                <label>精准推荐</label>
+                                <h4>精准推荐</h4>
                             </li>
                             <li>
                                 <img src="/new-page/image/job/质量保障.png" alt="">
-                                <label>质量保障</label>
+                                <h4>质量保障</h4>
                             </li>
                             <li>
                                 <img src="/new-page/image/job/互联共享.png" alt="">
-                                <label>互联共享</label>
+                                <h4>互联共享</h4>
+                            </li>
+                            <li class="more">
+                                <a href="/jobs/4" target="_blank">更多职位</a>
                             </li>
                         </ul>
                     </div>
@@ -1354,7 +1365,7 @@
                             @if($art->type == 2)
                                 <li>
                                     <a href="/research/{{$art->id}}" target="_blank" title="{{$art->title}}">
-                                        <label>{{$art->title}}</label>
+                                        <h5>{{$art->title}}</h5>
                                         <span class="desc">{{$art->content}}</span>
                                         <span class="pic"><img src="http://www.giewoo.com{{$art->picture}}" alt="{{$art->title}}" width="235" height="120"/></span>
                                     </a>
@@ -1368,7 +1379,7 @@
                             @if($art->type == 1)
                         <li>
                             <a href="/dynamic/{{$art->id}}" target="_blank" title="{{$art->title}}">
-                                <label>{{$art->title}}</label>
+                                <h5>{{$art->title}}</h5>
                                 <span class="desc">{{$art->content}}</span>
                                 <span class="pic"><img src="http://www.giewoo.com{{$art->picture}}" alt="{{$art->title}}" alt="{{$art->title}}" width="235" height="120"/></span>
                             </a>
@@ -1389,44 +1400,44 @@
                 <ul class="clear">
                     <li>
                         <a href="javascript:void(0);">
-                            <label>顾问漂流记</label>
-                            <span>&nbsp;<strong>01</strong><i></i></span>
-                            <img src="/new-page/image/team/t01.jpg"/>
+                            <strong>顾问漂流记</strong>
+                            <span>&nbsp;<b>01</b><i></i></span>
+                            <img src="/new-page/image/team/t01.jpg" alt="顾问漂流记"/>
                         </a>
                     </li>
                     <li>
                         <a href="javascript:void(0);">
-                            <label>即沃北京办野外训练营</label>
-                            <span>&nbsp;<strong>02</strong><i></i></span>
-                            <img src="/new-page/image/team/t02.jpg"/>
+                            <strong>即沃北京办野外训练营</strong>
+                            <span>&nbsp;<b>02</b><i></i></span>
+                            <img src="/new-page/image/team/t02.jpg" alt="即沃北京办野外训练营"/>
                         </a>
                     </li>
                     <li>
                         <a href="javascript:void(0);">
-                            <label>金融顾问头脑风暴</label>
-                            <span>&nbsp;<strong>03</strong><i></i></span>
-                            <img src="/new-page/image/team/t03.jpg"/>
+                            <strong>金融顾问头脑风暴</strong>
+                            <span>&nbsp;<b>03</b><i></i></span>
+                            <img src="/new-page/image/team/t03.jpg" alt="金融顾问头脑风暴"/>
                         </a>
                     </li>
                     <li>
                         <a href="javascript:void(0);">
-                            <label>团建游戏</label>
-                            <span>&nbsp;<strong>04</strong><i></i></span>
-                            <img src="/new-page/image/team/t04.jpg"/>
+                            <strong>团建游戏</strong>
+                            <span>&nbsp;<b>04</b><i></i></span>
+                            <img src="/new-page/image/team/t04.jpg" alt="团建游戏"/>
                         </a>
                     </li>
                     <li>
                         <a href="javascript:void(0);">
-                            <label>人力资源管理论坛</label>
-                            <span>&nbsp;<strong>05</strong><i></i></span>
-                            <img src="/new-page/image/team/t05.jpg"/>
+                            <strong>人力资源管理论坛</strong>
+                            <span>&nbsp;<b>05</b><i></i></span>
+                            <img src="/new-page/image/team/t05.jpg" alt="人力资源管理论坛"/>
                         </a>
                     </li>
                     <li>
                         <a href="javascript:void(0);">
-                            <label>上海猎头行业峰会</label>
-                            <span>&nbsp;<strong>06</strong><i></i></span>
-                            <img src="/new-page/image/team/t06.jpg"/>
+                            <strong>上海猎头行业峰会</strong>
+                            <span>&nbsp;<b>06</b><i></i></span>
+                            <img src="/new-page/image/team/t06.jpg" alt="上海猎头行业峰会"/>
                         </a>
                     </li>
                 </ul>
@@ -1460,10 +1471,51 @@
                 </p>
             </div>
         </div>
-
+        <!--网站导航地图-->
+        <div id="sitemap">
+            <div class="flex-row">
+                <div class="flex-tr one">
+                    <ul>
+                        <li class="head title">网站地图</li>
+                    </ul>
+                </div>
+                <div class="flex-tr one">
+                    <ul>
+                        <li class="head">网站首页</li>
+                        <li><a href="#us">我们</a></li>
+                        <li><a href="#server">服务</a></li>
+                        <li><a href="#job">职位</a></li>
+                        <li><a href="#article">资讯</a></li>
+                        <li><a href="#team">团队</a></li>
+                    </ul>
+                </div>
+                <div class="flex-tr one">
+                    <ul>
+                        <li class="head">文章资讯</li>
+                        <li><a href="/research">即沃研究院</a></li>
+                        <li><a href="/dynamic">职场动态</a></li>
+                    </ul>
+                </div>
+                <div class="flex-tr two">
+                    <ul>
+                        <li class="head">行业职位</li>
+                        <li><a href="/jobs/1">IT/互联网</a></li>
+                        <li><a href="/jobs/2">金融</a></li>
+                        <li><a href="/jobs/7">化工/环保/能源</a></li>
+                        <li><a href="/jobs/10">通信/电子/信息</a></li>
+                        <li><a href="/jobs/3">房产/建筑/建材</a></li>
+                        <li><a href="/jobs/4">汽车/机械/制造</a></li>
+                        <li><a href="/jobs/6">消费品</a></li>
+                        <li><a href="/jobs/8">广告/传媒/教育</a></li>
+                        <li><a href="/jobs/9">交通/贸易/物流</a></li>
+                        <li><a href="/jobs/5">文化/旅游/健康</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <!--页脚-->
         <div class="footer">
-            &copy;2015 上海即沃企业管理咨询有限公司 版权所有　　|　　<a href="javascript:;" target="_blank">沪ICP备15055149号</a>
+            &copy;2015 上海即沃企业管理咨询有限公司 版权所有　　|　　沪ICP备15055149号
         </div>
     </div>
 

@@ -46,4 +46,4 @@ html, body { height: 100%; }
 
 img.image { max-width: 100%; }
 
-.footer { width: 100%; position: absolute; background: #333333; color: #fff; bottom: 0; text-align: center; line-height: 50px; }
+.footer { width: 100%; position: absolute; background: #999; color: #fff; bottom: 0; text-align: center; line-height: 50px; }

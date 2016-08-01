@@ -54,6 +54,10 @@
                                     <option value="4">机械制造</option>
                                     <option value="5">文件 & 养老 & 健康</option>
                                     <option value="6">消费品</option>
+                                    <option value="7">化工 & 环保 & 能源</option>
+                                    <option value="8">广告 & 传媒 & 教育</option>
+                                    <option value="9">交通 & 贸易 & 物流</option>
+                                    <option value="10">通信 & 电子 & 硬件</option>
                                 </select>
                             </div>
                         </div>

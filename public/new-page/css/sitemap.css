@@ -1,0 +1,11 @@
+#sitemap { background: #999; border-bottom: 1px solid #fff; color: #fff; padding: 10px 0; }
+#sitemap .flex-row { width: 1100px; display: flex; margin: 0 auto; }
+#sitemap .flex-row .flex-tr.one { flex: 1; }
+#sitemap .flex-row .flex-tr.two { flex: 2; }
+#sitemap .flex-row .flex-tr.two li { display: inline-block; width: 50%; float: left; }
+#sitemap .flex-row .flex-tr ul { padding: 0; margin: 0; }
+#sitemap .flex-row .flex-tr ul li { padding: 7px 15px; box-sizing: border-box; }
+#sitemap .flex-row .flex-tr ul li.head { width: 100%; font-size: 1.2em; color: #000; font-weight: bold; }
+#sitemap .flex-row .flex-tr ul li.head.title { color: #000; }
+#sitemap .flex-row .flex-tr ul li a { color: #fff; }
+#sitemap .flex-row .flex-tr ul li a:hover { text-shadow: 0 0 1px #fff; }
